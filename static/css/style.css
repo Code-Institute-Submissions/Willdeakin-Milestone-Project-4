@@ -1,0 +1,22 @@
+:root{
+    font-size: 10px;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+body::-webkit-scrollbar{
+    width: 0.5rem;
+}
+body::-webkit-scrollbar-track{
+    color:black;
+}
+body::-webkit-scrollbar-thumb{
+    color:blue;
+}
+
+
+
+
+
