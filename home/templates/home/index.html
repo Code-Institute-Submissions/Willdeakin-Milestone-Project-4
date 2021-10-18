@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block page_header %}
@@ -9,9 +9,14 @@
 {% block content %}
     <div class="container header-container">
         <div class="row">
-            <div class="col">
-                <h1>Home Page</h1>
+            <div class="col main-title">
+                <h1 class="">Home Page</h1>
             </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-6 col-lg-4"></div>
+            <div class="col col-md-6 col-lg-4"></div>
+            <div class="col col-md-6 col-lg-4"></div>
         </div>
     </div>
 {% endblock %}

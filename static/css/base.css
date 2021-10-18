@@ -1,0 +1,55 @@
+/*
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+
+
+:root{
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+body::-webkit-scrollbar{
+    width: 0.5rem;
+}
+body::-webkit-scrollbar-track{
+    color:black;
+}
+body::-webkit-scrollbar-thumb{
+    color:blue;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.main-title{
+    text-align: center;
+    margin: 1rem 0 0 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar-toggler:active{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+
+    transition: transform 2s;
+}
+
+.navbar-toggler{
+    transform: rotate(0deg);
+
+    transition: 0s;
+}
+
+
+
+
