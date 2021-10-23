@@ -8,6 +8,11 @@ font-family: 'Roboto', sans-serif;
 :root{
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
+    --baby-blue-eyes: #9ac4f8ff;
+    --vivid-burgundy: #a30b37ff;
+    --rosy-brown: #cb958eff;
+    --celadon: #a7e8bdff;
+    --orange-yellow-crayola: #ffd972ff;
 }
 
 body{
@@ -36,6 +41,10 @@ body::-webkit-scrollbar-thumb{
     font-family: 'Playfair Display', serif;
 }
 
+.bg-dark{
+    background-color: #9ac4f8ff;
+}
+
 .navbar-toggler:active{
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
@@ -48,6 +57,14 @@ body::-webkit-scrollbar-thumb{
     transform: rotate(0deg);
 
     transition: 0s;
+}
+
+.nav-link{
+    color: var(--vivid-burgundy);
+}
+
+.session-user{
+    color:#9ac4f8ff;
 }
 
 
