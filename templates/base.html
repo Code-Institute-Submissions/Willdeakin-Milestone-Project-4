@@ -33,13 +33,48 @@
 </head>
 <body>
 
-    {% include 'includes/navbar.html' %}
+    <div class="nav-wrapper">
+
+        <div class="pos-f-t">
+          <div class="collapse" id="navbarToggleExternalContent">
+            {% if request.user.is_authenticated %}
+                  <div class="bg-custom p-4">
+                      <div class="row">
+                        <span class="col-4"><a href="{% url 'store' %}" class="nav-link">Browse Our Selection Of Fitness Equipment</a></span>
+                        <span class="col-4 "><a href="{% url 'profile' %}" class="nav-link">Profile</a></span>
+                        <span class="col-4"><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></span>
+                        <span class="session-user">Logged in</span>
+                    </div>
+                  </div>
+            {% else %}
+
+                  <div class="bg-custom p-4">
+                    <div class="row">
+                      <span class="col-4"><a href="{% url 'store' %}" class="nav-link">Browse Our Selection Of Fitness Equipment</a></span>
+                      <span class="col-4 "><a href="{% url 'account_login' %}" class="nav-link">Login</a></span>
+                      <span class="col-4"><a href="{% url 'account_signup' %}" class="nav-link">Register</a></span>
+                    </div>
+                  </div>
+            {% endif %}
+          </div>
+        </div>
+            <nav class="navbar navbar-dark bg-custom">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+      </div>
+      
 
     {% block page_header %}
     {% endblock %}
 
     {% block content %}
     {% endblock %}
+
+    <p class="red">vbnfdbvhfb</p>
+
+    <div class="long"></div>
 
 </body>
 

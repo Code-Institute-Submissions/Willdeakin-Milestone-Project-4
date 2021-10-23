@@ -1,6 +1,12 @@
 /*
 font-family: 'Playfair Display', serif;
 font-family: 'Roboto', sans-serif;
+
+    --baby-blue-eyes: #9ac4f8ff;
+    --vivid-burgundy: #a30b37ff;
+    --rosy-brown: #cb958eff;
+    --celadon: #a7e8bdff;
+    --orange-yellow-crayola: #ffd972ff;
 */
 
 
@@ -8,32 +14,56 @@ font-family: 'Roboto', sans-serif;
 :root{
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
+
     --baby-blue-eyes: #9ac4f8ff;
     --vivid-burgundy: #a30b37ff;
     --rosy-brown: #cb958eff;
     --celadon: #a7e8bdff;
     --orange-yellow-crayola: #ffd972ff;
+
+    --blue-bell: #A2A0CF;
+    --middle-blue-purple: #7D7ABC;
+    --honeydew: #D8E8D8;
+    --torquise-green: #B8D5B8;
 }
 
 body{
     margin:0;
     padding:0;
+    z-index: 1;
 }
 body::-webkit-scrollbar{
-    width: 0.5rem;
+    width: 1rem;
 }
 body::-webkit-scrollbar-track{
-    color:black;
+    background-color:var(--torquise-green);
+
 }
 body::-webkit-scrollbar-thumb{
-    color:blue;
+    background-color:var(--honeydew);
+    border: 0.1rem solid var(--torquise-green);
+    border-radius: 100vw;
+}
+
+.nav-wrapper{
+    background-color: var(--torquise-green);
+}
+
+.bg-custom{
+    background-color: var(--torquise-green);
+    margin:0;
 }
 
 .nav-link{
-    text-decoration: none;
-    color: white;
     text-align: center;
+    color:var(--blue-bell);
 }
+
+.nav-link:hover{
+    color: var(--middle-blue-purple);
+    text-decoration: underline;
+}
+
 
 .main-title{
     text-align: center;
@@ -41,32 +71,23 @@ body::-webkit-scrollbar-thumb{
     font-family: 'Playfair Display', serif;
 }
 
-.bg-dark{
-    background-color: #9ac4f8ff;
-}
-
-.navbar-toggler:active{
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-
-    transition: transform 2s;
-}
-
-.navbar-toggler{
-    transform: rotate(0deg);
-
-    transition: 0s;
-}
-
-.nav-link{
-    color: var(--vivid-burgundy);
-}
-
 .session-user{
-    color:#9ac4f8ff;
+    color: white;
+}
+
+.red{
+    color:red;
+}
+
+.long{
+    height: 9999px;
+    width: 2vw;
+    background-color: red;
 }
 
 
-
-
+@media {
+    .nav-wrapper{
+    width:100%;
+    }
+}
