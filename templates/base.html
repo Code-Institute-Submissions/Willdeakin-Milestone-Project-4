@@ -40,9 +40,10 @@
             {% if request.user.is_authenticated %}
                   <div class="bg-custom p-4">
                       <div class="row">
-                        <span class="col-4"><a href="{% url 'store' %}" class="nav-link">Browse Our Selection Of Fitness Equipment</a></span>
-                        <span class="col-4 "><a href="{% url 'profile' %}" class="nav-link">Profile</a></span>
-                        <span class="col-4"><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></span>
+                        <span class="col-3"><a href="{% url 'home' %}" class="nav-link">Home</a></span>
+                        <span class="col-3"><a href="{% url 'store' %}" class="nav-link">Browse Our Selection Of Fitness Equipment</a></span>
+                        <span class="col-3 "><a href="{% url 'profile' %}" class="nav-link">Profile</a></span>
+                        <span class="col-3"><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></span>
                         <span class="session-user">Logged in</span>
                     </div>
                   </div>
@@ -50,6 +51,7 @@
 
                   <div class="bg-custom p-4">
                     <div class="row">
+                      <span class="col-4"><a href="{% url 'home' %}" class="nav-link">Home</a></span>
                       <span class="col-4"><a href="{% url 'store' %}" class="nav-link">Browse Our Selection Of Fitness Equipment</a></span>
                       <span class="col-4 "><a href="{% url 'account_login' %}" class="nav-link">Login</a></span>
                       <span class="col-4"><a href="{% url 'account_signup' %}" class="nav-link">Register</a></span>
@@ -62,6 +64,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
+                <span class="checkout"><a href="{% url 'checkout' %}" class="nav-link-checkout"><i class="fas fa-shopping-bag"></i> Checkout</a></span>
             </nav>
       </div>
       

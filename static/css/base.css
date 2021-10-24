@@ -20,6 +20,8 @@ font-family: 'Roboto', sans-serif;
     --rosy-brown: #cb958eff;
     --celadon: #a7e8bdff;
     --orange-yellow-crayola: #ffd972ff;
+    --french-bistre: #816A5F;
+    --umber: #6A574E;
 
     --blue-bell: #A2A0CF;
     --middle-blue-purple: #7D7ABC;
@@ -30,7 +32,6 @@ font-family: 'Roboto', sans-serif;
 body{
     margin:0;
     padding:0;
-    z-index: 1;
 }
 body::-webkit-scrollbar{
     width: 1rem;
@@ -47,6 +48,7 @@ body::-webkit-scrollbar-thumb{
 
 .nav-wrapper{
     background-color: var(--torquise-green);
+    width: 100%;
 }
 
 .bg-custom{
@@ -54,13 +56,41 @@ body::-webkit-scrollbar-thumb{
     margin:0;
 }
 
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(129, 106, 95, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    font-size: 1.5rem;;
+}
+
+.navbar-toggler-icon:hover{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(106, 87, 78, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
 .nav-link{
     text-align: center;
-    color:var(--blue-bell);
+    color:var(--french-bistre);
+    border: 1px solid transparent;
+    margin: 0 5rem 0 5rem;
 }
 
 .nav-link:hover{
-    color: var(--middle-blue-purple);
+    color: var(--umber);
+    border: 1px solid var(--umber);
+    background-color: var(--honeydew);
+}
+
+.checkout{
+    position: fixed;
+    right: 2rem;
+    margin: 0;
+}
+
+.nav-link-checkout{
+    text-align: center;
+    color:var(--french-bistre);
+}
+
+.nav-link-checkout:hover{
+    color: var(--umber);
     text-decoration: underline;
 }
 
@@ -69,6 +99,7 @@ body::-webkit-scrollbar-thumb{
     text-align: center;
     margin: 1rem 0 0 1rem;
     font-family: 'Playfair Display', serif;
+    color: var(--umber);
 }
 
 .session-user{
@@ -85,9 +116,3 @@ body::-webkit-scrollbar-thumb{
     background-color: red;
 }
 
-
-@media {
-    .nav-wrapper{
-    width:100%;
-    }
-}

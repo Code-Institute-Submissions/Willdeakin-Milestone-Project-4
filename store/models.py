@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class products (models.Model):
+class Products(models.Model):
 
     brand = models.CharField(max_length=254, null=True, blank=True)
     product	= models.CharField(max_length=254, null=True, blank=True)

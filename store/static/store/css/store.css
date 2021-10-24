@@ -1,0 +1,8 @@
+.product-card{
+    width: 50%;
+    background-color: var(--torquise-green);
+}
+
+.card-img-top{
+    width:33%;
+}
