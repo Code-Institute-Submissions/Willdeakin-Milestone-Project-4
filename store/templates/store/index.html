@@ -45,16 +45,17 @@
 <div class="row">
 {% for product in products %}
 
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
             <div class="card product-card" >
                 {% if product.image %}
-                <a href="#">
-                    <img class="card-img-top" src="../media/{{ product.image }}" alt="{{ product.product }}">
-                </a>
+                    <div class="container">
+                        <a href="#">
+                            <img class="card-img-top" src="../media/{{ product.image }}" alt="{{ product.product }}">
+                        </a>
+                    </div>
                 {% endif %}
                 <div class="card-body">
                     <p class="mb-0">{{ product.brand }} {{ product.product }}</p>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <div class="row">
                         <div class="col-4"><a href=""><button class="card-btn">Add To Basket</button></a></div>
                         <div class="col-4"></div>
