@@ -62,3 +62,15 @@ def index(request):
     }
 
     return render(request, 'store/index.html', context)
+
+
+def product_detail(request, product_id):
+    """ A view to show individual product details """
+
+    product = get_object_or_404(Products, pk=product_id)
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'store/product_detail.html', context)
