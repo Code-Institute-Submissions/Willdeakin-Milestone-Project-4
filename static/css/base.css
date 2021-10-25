@@ -33,6 +33,7 @@ body{
     margin:0;
     padding:0;
 }
+/*---------------------------------------------------Scrollbar*/
 body::-webkit-scrollbar{
     width: 1rem;
 }
@@ -45,10 +46,12 @@ body::-webkit-scrollbar-thumb{
     border: 0.1rem solid var(--torquise-green);
     border-radius: 100vw;
 }
-
+/*---------------------------------------------------Navbar*/
 .nav-wrapper{
     background-color: var(--torquise-green);
     width: 100%;
+    position: fixed;
+    z-index: 10;
 }
 
 .bg-custom{
@@ -61,7 +64,8 @@ body::-webkit-scrollbar-thumb{
     font-size: 1.5rem;;
 }
 
-.navbar-toggler-icon:hover{
+.navbar-toggler-icon:hover,
+.navbar-toggler-icon:active{
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(106, 87, 78, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
@@ -92,19 +96,21 @@ body::-webkit-scrollbar-thumb{
 .nav-link-checkout:hover{
     color: var(--umber);
     text-decoration: underline;
+    font-size: 1.2rem;
+}
+.session-user{
+    color: white;
 }
 
-
+/*---------------------------------------------------Content*/
 .main-title{
     text-align: center;
-    margin: 1rem 0 0 1rem;
+    margin: 7rem 0 0 1rem;
     font-family: 'Playfair Display', serif;
     color: var(--umber);
 }
 
-.session-user{
-    color: white;
-}
+
 
 .red{
     color:red;
@@ -114,5 +120,33 @@ body::-webkit-scrollbar-thumb{
     height: 9999px;
     width: 2vw;
     background-color: red;
+}
+
+/*---------------------------------------------------Store*/
+
+.product-card{
+    width: 80%;
+    background-color: var(--torquise-green);
+    margin: 2rem auto 2rem auto;
+}
+
+.product-card:hover{
+    width: 85%;
+    background-color: var(--honeydew);
+}
+
+.card-img-top{
+    width:60%;
+    display: block;
+    margin: auto;
+}
+
+.card-text{
+    color: var(--umber);
+}
+
+.card-btn{
+    margin: auto;
+    background-color: var(--blue-bell);
 }
 
