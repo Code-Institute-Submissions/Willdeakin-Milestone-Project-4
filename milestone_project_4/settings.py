@@ -48,6 +48,10 @@ INSTALLED_APPS = [
     'home',
     'profiles',
     'checkout',
+    'bag',
+
+    #other
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -61,6 +65,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'milestone_project_4.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
