@@ -33,6 +33,9 @@
 </head>
 <body>
 
+  {% include 'includes/navbar.html' %}
+
+
     <div class="nav-wrapper">
 
         <div class="pos-f-t">
@@ -64,7 +67,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
-                <span class="checkout"><a href="{% url 'checkout' %}" class="nav-link-checkout"><i class="fas fa-shopping-bag"></i> Checkout</a></span>
+                <span class="checkout"><a href="{% url 'bag' %}" class="nav-link-bag"><i class="fas fa-shopping-bag"></i> Bag</a></span>
             </nav>
       </div>
 
@@ -80,20 +83,8 @@
 
     {% block page_header %}
     {% endblock %}
-    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-      <form method="GET" action="{% url 'store' %}">
-          <div class="input-group w-100">
-              <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
-              <div class="input-group-append">
-                  <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                      <span class="icon">
-                          <i class="fas fa-search"></i>
-                      </span>
-                  </button>
-              </div>
-          </div>
-      </form>
-    </div>
+    
+    {% include 'includes/searchbar.html' %}
 
 
 

@@ -1,34 +1,35 @@
-
-
 <div class="nav-wrapper">
 
-  <div class="pos-f-t">
-    <div class="collapse" id="navbarToggleExternalContent">
-      {% if request.user.is_authenticated %}
-            <div class="bg-dark p-4">
-              <span><a href="#" class="nav-link">Browse Our Selection Of Fitness Equipment</a></span>
-
-              <span class="session-user">Logged in</span>
-            </div>
-      {% else %}
-        
-            <div class="bg-dark p-4">
-              <div class="row">
-                <span class="col-4"><a href="{% url 'store' %}" class="nav-link">Browse Our Selection Of Fitness Equipment</a></span>
-                <span class="col-4 "><a href="{% url 'account_login' %}" class="nav-link">Login</a></span>
-                <span class="col-4"><a href="{% url 'account_signup' %}" class="nav-link">Register</a></span>
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        {% if request.user.is_authenticated %}
+              <div class="bg-custom p-4">
+                  <div class="row">
+                    <span class="col-3"><a href="{% url 'home' %}" class="nav-link">Home</a></span>
+                    <span class="col-3"><a href="{% url 'store' %}" class="nav-link">Browse Our Selection Of Fitness Equipment</a></span>
+                    <span class="col-3 "><a href="{% url 'profile' %}" class="nav-link">Profile</a></span>
+                    <span class="col-3"><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></span>
+                    <span class="session-user">Logged in</span>
+                </div>
               </div>
-            </div>
-      {% endif %}
+        {% else %}
+
+              <div class="bg-custom p-4">
+                <div class="row">
+                  <span class="col-3"><a href="{% url 'home' %}" class="nav-link">Home</a></span>
+                  <span class="col-3"><a href="{% url 'store' %}" class="nav-link">Browse Our Selection Of Fitness Equipment</a></span>
+                  <span class="col-3 "><a href="{% url 'account_login' %}" class="nav-link">Login</a></span>
+                  <span class="col-3"><a href="{% url 'account_signup' %}" class="nav-link">Register</a></span>
+                </div>
+              </div>
+        {% endif %}
+      </div>
     </div>
+        <nav class="navbar navbar-dark bg-custom">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <span class="checkout"><a href="{% url 'bag' %}" class="nav-link-bag"><i class="fas fa-shopping-bag"></i> Bag</a></span>
+        </nav>
   </div>
-      <nav class="navbar navbar-dark bg-dark">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      </nav>
 
-
-
-
-</div>

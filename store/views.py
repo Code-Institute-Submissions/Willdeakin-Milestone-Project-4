@@ -1,4 +1,3 @@
-  
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -32,7 +31,7 @@ def index(request):
                 sortkey = 'lower_brand'
                 products = products.annotate(lower_brand=Lower('brand'))
             if sortkey == 'category':
-                sortkey = 'category__name'
+                sortkey = 'category'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -50,7 +49,7 @@ def index(request):
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('store'))
             
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(Q(description__icontains=query) | Q(product__icontains=query)| Q(brand__icontains=query))
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
