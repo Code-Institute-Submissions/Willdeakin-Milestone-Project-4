@@ -48,24 +48,27 @@
 <div class="row">
 {% for product in products %}
 
-        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="col-12 col-md-6 col-xl-3">
             <div class="card product-card" >
-                {% if product.image %}
-                    <div class="container">
+                <div class="container">
+                    {% if product.image %}
+                    
                         <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top" src="../media/{{ product.image }}" alt="{{ product.product }}">
                         </a>
-                    </div>
-                {% endif %}
+                    
+                    {% endif %}
                 <div class="card-body">
                     <p class="card-category">{{ product.category }}</p>
                     <p class="mb-0">{{ product.brand }} {{ product.product }}</p>
                     <p>£{{ product.price }}</p>
                     <div class="row">
-                        <div class="col-4"><a href=""><button class="card-btn left-btn">Add To Bag</button></a></div>
-                        <div class="col-4"></div>
-                        <div class="col-4 "><a href="{% url 'product_detail' product.id %}" class=""><button class="card-btn justify-content-end">Product Details</button></a></div>
+                        <a href=""><button class="card-btn">Add To Bag</button></a>
+                        <a href="{% url 'product_detail' product.id %}" class=""><button class="card-btn">Product Details</button></a>
                     </div>
+
+                </div>
+
                 </div>
             </div>
         </div>

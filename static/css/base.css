@@ -126,25 +126,32 @@ body::-webkit-scrollbar-thumb{
 
 .product-card{
     width: 80%;
-    background-color: var(--torquise-green);
     margin: 2rem auto 2rem auto;
-    height: 35vh;
+    height: 60vh;
+    border: none;
 }
 
 .product-card:hover{
     width: 85%;
-    background-color: var(--honeydew);
 }
 
 .card-img-top{
-    width:60%;
+    width:70%;
     display: block;
     margin: auto;
+    border:1px var(--umber);
 }
 
 .card-body{
-    position: absolute;
+    width:70%;
+    display: block;
+    margin: auto;
     bottom: 1rem;
+    background-color: var(--torquise-green);
+}
+
+.card-body.hover{
+    background-color: var(--honeydew);
 }
 
 .card-text{
@@ -152,16 +159,8 @@ body::-webkit-scrollbar-thumb{
 }
 
 .card-btn{
-    margin: auto;
+    margin:  auto 1rem auto 1rem;
     background-color: var(--blue-bell);
-}
-
-.left-btn{
-    float: left;
-}
-
-.right-btn{
-    float:right;
 }
 
 .card-category{
@@ -172,6 +171,13 @@ body::-webkit-scrollbar-thumb{
 
 /*---------------------------------------------------Media Queries*/
 
+@media (min-width: 576px){
+    .product-card{
+        height: 50vh;
+    }
+
+}
+
 @media (min-width: 768px){
     :root{
         font-size: 15px;
@@ -181,5 +187,15 @@ body::-webkit-scrollbar-thumb{
     }
     .main-title{
         margin: 7rem 0 0 1rem;
+    }
+    .product-card{
+        height: 40vh;
+        width:90%;
+    }
+}
+
+@media (min-width: 992px){
+    .product-card{
+        width:80%;
     }
 }

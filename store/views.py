@@ -21,7 +21,7 @@ def index(request):
     query = None
     categories = None
     sort = None
-    direction = None
+    direction = 'asc'
 
     if request.GET:
         if 'sort' in request.GET:
