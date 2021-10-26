@@ -122,6 +122,13 @@ body::-webkit-scrollbar-thumb{
     background-color: red;
 }
 
+/*---------------------------------------------------Home*/
+.carousel-container{
+    width: 70%;
+    margin: auto;
+    height: 75vh;
+}
+
 /*---------------------------------------------------Store*/
 
 .product-card{
