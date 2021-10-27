@@ -33,13 +33,17 @@
                         </div>
                         <div class="carousel-item">
                             <img src="../media/pexels-li-sun-2475878.jpg" class="d-block w-100" alt="dumbbell woman">
-                            <h5>Home Gym Equipment</h5>
-                            <p>We have a selection of cardio and strength equipment available</p>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Home Gym Equipment</h5>
+                                <p>We have a selection of cardio and strength equipment available</p>
+                            </div>
                         </div>
                         <div class="carousel-item">
                             <img src="../media/pexels-ketut-subiyanto-4428992.jpg" class="d-block w-100" alt="watch woman">
-                            <h5>Fitness Trackers</h5>
-                            <p>Check out our range of fitness trackers to keep on track</p>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Fitness Trackers</h5>
+                                <p>Check out our range of fitness trackers to keep on track</p>
+                            </div>
                         </div>
                         <div class="carousel-item">
                             <img src="../media/pexels-rainer-eck-4811385.jpg" class="d-block w-100" alt="pullup woman">
@@ -62,12 +66,3 @@
     
 {% endblock %}
 
-{% block extrajs %}
-<script>
-    //starts the carousel
-$('#homecarousel').carousel(
-    interval: 200;
-);
-
-</script>
-{% endblock %}
