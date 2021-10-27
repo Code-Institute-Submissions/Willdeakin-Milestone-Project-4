@@ -58,20 +58,33 @@
     <form method="GET" action="{% url 'store' %}">
     <div class="row">
       <div class="col-12">
-        <div class="dropdown-menu border-0" aria-labelledby="sort-by-link"></div>
-          <span><a href="{% url 'store' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></span>
-          <span><a href="{% url 'store' %}?sort=brand&direction=desc" class="dropdown-item ">By Brand</a></span>
-          <span><a href="{% url 'store' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a></span>
-          <span><a href="{% url 'store' %}" class="dropdown-item">All Products</a></span>
-        </div>
-        <div class="dropdown-menu border-0" aria-labelledby="filter-by-link">
-          <a href="{% url 'store' %}?category=supplements" class="dropdown-item">Supplements</a>
-          <a href="{% url 'store' %}?category=home gym equipment" class="dropdown-item">Home Gym Equipment</a>
-          <a href="{% url 'store' %}?category=fitness tracker" class="dropdown-item">Fitness Trackers</a>
+        <div class="sort-container">
+          <a href="{% url 'store' %}?sort=price&direction=asc" ><button class="sort-btn">By Price</button></a>
+          <a href="{% url 'store' %}?sort=brand&direction=desc" ></a><button class="sort-btn">By Brand</button></a>
+          <a href="{% url 'store' %}?sort=category&direction=asc" ></a><button class="sort-btn">By Category</button></a>
+          <a href="{% url 'store' %}" ></a><button class="sort-btn">All Products</button></a>
         </div>
       </div>
     </div>
     </form>
+
+
+    {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toast_success.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
 
     {% block content %}
     {% endblock %}
@@ -79,6 +92,12 @@
     <p class="red">vbnfdbvhfb</p>
 
     <div class="long"></div>
+
+    {% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
+    {% endblock %}
 
 </body>
 

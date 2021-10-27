@@ -6,6 +6,7 @@ from .models import UserProfile
 from .forms import UserProfileForm
 # Create your views here.
 
+@login_required
 def profile(request):
     """ Display and edit the user's profile """
 
