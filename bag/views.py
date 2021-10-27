@@ -64,6 +64,8 @@ def adjust_bag(request, item_id):
 
 def remove_from_bag(request, item_id):
     """Remove the item from the shopping bag"""
+
+    bag = request.session.get('bag', {})
     try:
         bag.pop(item_id)
 

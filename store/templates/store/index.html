@@ -36,10 +36,7 @@
                         <p>£{{ product.price }}</p>
                         <div class="row">
                             <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
-                                {% csrf_token %}
-                                    quantity = 1 processor here
-                                <input type="submit" class="card-btn " value="Add to Bag">
-                                
+                                {% csrf_token %}                            
                             </form>
                             <a href="{% url 'product_detail' product.id %}" class=""><button class="card-btn">Product Details</button></a>
 
