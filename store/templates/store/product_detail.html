@@ -26,6 +26,15 @@
                     <p class="mb-0">{{ product.product }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                     
+                    {% if product.serving %}
+                        <p>This product comes as a {{ product.serving }} packet</p>
+                    {% endif %}
+                    
+                    {% if product.adjustable == "adjustable dumbbell" %}
+                        <p>This weight is an {{ product.adjustable }}</p>
+                    {% elif product.adjustable %}
+                        <p>This weight is a {{ product.adjustable }}</p>
+                    {% endif %}
                     
                     <p class="mt-3">{{ product.description }}</p>
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">

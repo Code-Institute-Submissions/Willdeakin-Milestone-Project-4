@@ -110,18 +110,6 @@ body::-webkit-scrollbar-thumb{
     color: var(--umber);
 }
 
-
-
-.red{
-    color:red;
-}
-
-.long{
-    height: 9999px;
-    width: 2vw;
-    background-color: red;
-}
-
 /*---------------------------------------------------Home*/
 .carousel-container{
     width: 70%;
@@ -206,13 +194,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 /* Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
-    border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
 
 .arrow-success {
     border-bottom-color: #28a745 !important;
@@ -230,18 +211,16 @@ body::-webkit-scrollbar-thumb{
     border-bottom-color: #17a2b8 !important;
 }
 
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
-}
-
 .bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.header-success{
+    border-bottom-style: solid ;
+    border-bottom-width:  1px ;
+    border-bottom-color: #28a745;
 }
 
 

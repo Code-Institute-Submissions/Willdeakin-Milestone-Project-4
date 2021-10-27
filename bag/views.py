@@ -44,7 +44,7 @@ def adjust_bag(request, item_id):
 
     if size:
         if quantity > 0:
-            bag[item_id]['items_by_size'][size] = quantity
+            bag[item_id] = quantity
             messages.success(request, f'Changed size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}')
         else:
             del bag[item_id]['items_by_size'][size]
@@ -56,8 +56,8 @@ def adjust_bag(request, item_id):
             bag[item_id] = quantity
         else:
             bag.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your bag')
-
+            
+    messages.success(request, f'Saved the amount of {product.product} in your bag as {quantity}')
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
