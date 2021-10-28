@@ -26,6 +26,8 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- Stripe -->
+        <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
     <title>Fitness Centre {% block extra_title %}{% endblock %}</title>
@@ -36,38 +38,16 @@
   {% include 'includes/navbar.html' %}
 
 
-    
+    <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        All Products
+    </a>
 
-
-        <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            All Products
-        </a>
-
-
-        
-
-      
 
     {% block page_header %}
     {% endblock %}
     
-    {% include 'includes/searchbar.html' %}
-
-
-
-    <form method="GET" action="{% url 'store' %}">
-    <div class="row">
-      <div class="col-12">
-        <div class="sort-container">
-          <a href="{% url 'store' %}?sort=price&direction=asc" ><button class="sort-btn">By Price</button></a>
-          <a href="{% url 'store' %}?sort=brand&direction=desc" ></a><button class="sort-btn">By Brand</button></a>
-          <a href="{% url 'store' %}?sort=category&direction=asc" ></a><button class="sort-btn">By Category</button></a>
-          <a href="{% url 'store' %}" ></a><button class="sort-btn">All Products</button></a>
-        </div>
-      </div>
-    </div>
-    </form>
-
+    {% block search %}
+  {% endblock %}
 
     {% if messages %}
         <div class="message-container">
@@ -85,11 +65,14 @@
         </div>
     {% endif %}
 
+    {% block blog_content %}
+    {% endblock %}
+
 
     {% block content %}
     {% endblock %}
 
-
+    
 
     {% block postloadjs %}
     <script type="text/javascript">

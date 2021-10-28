@@ -24,7 +24,7 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ product.product }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                     
                     {% if product.serving %}
                         <p>This product comes as a {{ product.serving }} packet</p>
@@ -37,7 +37,7 @@
                     {% endif %}
                     
                     <p class="mt-3">{{ product.description }}</p>
-                    <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                    <button class="regular-btn"><form class="form" action="{% url 'add_to_bag' product.id %}" method="POST"></button>
                         {% csrf_token %}
                         <div class="form-row">
                             
@@ -74,7 +74,7 @@
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
+                                    <span class="text-uppercase regular-btn">Keep Shopping</span>
                                 </a>
                                 <input type="submit" class="btn upper mt-5" value="Add to Bag">
                             </div>

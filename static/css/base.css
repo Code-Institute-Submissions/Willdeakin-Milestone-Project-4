@@ -109,6 +109,12 @@ body::-webkit-scrollbar-thumb{
     font-family: 'Playfair Display', serif;
     color: var(--umber);
 }
+.regular-btn{
+    margin: auto 1rem auto 1rem;
+    background-color: white;
+    border-color: black;
+    border-radius: 5px;
+}
 
 /*---------------------------------------------------Home*/
 .carousel-container{
@@ -146,7 +152,18 @@ body::-webkit-scrollbar-thumb{
 }
 .sort-btn{
     display:inline-block;
-    margin: 1rem 0 1rem 0
+    margin: 1rem 0 1rem 0;
+    background-color: white;
+    border-color: black;
+    border-radius: 5px;
+}
+.sort-link{
+    text-decoration: none;
+    color: var(--umber);
+}
+.sort-link:hover{
+    text-decoration: none;
+    color: var(--umber);
 }
 .product-card{
     width: 80%;
@@ -166,7 +183,7 @@ body::-webkit-scrollbar-thumb{
     border:1px var(--umber);
 }
 
-.card-body{
+.card-body-store{
     width:70%;
     display: block;
     margin: auto;
