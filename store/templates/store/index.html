@@ -14,10 +14,17 @@
 {% endblock %}
 
 {% block content %}
-
-
+<div class="row">
+{% if request.user.is_superuser %}
+    <a href="{% url 'add_product'%}" class="add-product">Add a Product</a> 
+{% endif %}
+</div>
 
 <div class="row">
+
+
+
+
 {% for product in products %}
 
         <div class="col-12 col-md-6 col-xl-3">
@@ -41,10 +48,7 @@
                             <a href="{% url 'product_detail' product.id %}" class=""><button class="card-btn">Product Details</button></a>
 
                             {% if request.user.is_superuser %}
-                            <small class="ml-3">
-                                <a href="{% url 'edit_product' product.id %}">Edit</a> 
-                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                            </small>
+                                <a href="{% url 'edit_product' product.id %}"><button class="card-btn">Edit</button></a> 
                             {% endif %}
                         </div>
                     </div>

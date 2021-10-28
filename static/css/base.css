@@ -114,8 +114,31 @@ body::-webkit-scrollbar-thumb{
 .carousel-container{
     width: 70%;
     margin: auto;
-    height: 75vh;
+    height: 65vh;
 }
+
+.carousel-item img{
+    height: 65vh;
+}
+
+.carousel-control-prev{
+    background-color: white;
+    color: var(--umber);
+}
+
+}
+
+.carousel-control-next{
+    background-color: white;
+    color: var(--umber);
+
+}
+
+.carousel-text{
+    color: var(--umber);
+}
+
+
 
 /*---------------------------------------------------Store*/
 .sort-container{
@@ -169,6 +192,12 @@ body::-webkit-scrollbar-thumb{
     font-family: 'Playfair Display', serif;
 }
 
+.add-product{
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+}
+
 /*---------------------------------------------------Toasts*/
 .message-container {
     position: fixed;
@@ -215,12 +244,6 @@ body::-webkit-scrollbar-thumb{
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
-}
-
-.header-success{
-    border-bottom-style: solid ;
-    border-bottom-width:  1px ;
-    border-bottom-color: #28a745;
 }
 
 

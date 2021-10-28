@@ -29,12 +29,12 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <span class="checkout"><a href="{% url 'view_bag' %}" class="nav-link-bag"><i class="fas fa-shopping-bag"></i> Bag 
-              {% if grand_total %}
-                  £{{ grand_total|floatformat:2 }}
-              {% else %}
-                  £0.00
-              {% endif %}
+              <span class="checkout"><a href="{% url 'view_bag' %}" class="nav-link-bag"><i class="fas fa-shopping-bag"></i> Bag 
+                {% if grand_total %}
+                    £{{ grand_total|floatformat:2 }}
+                {% else %}
+                    £0.00
+                {% endif %}
             </a></span>
         </nav>
   </div>

@@ -1,3 +1,44 @@
+
+# Milestone-Project-4
+My last Code Institute milestone project concerning Django Frameworks
+
+## Table Of Contents
+* [Purpose of the website](#purpose-of-the-website)
+* [User Experience (UX)](#user-experience-design)
+    * [User Stories](#user-stories)
+    * [Structure](#structure)
+    * [Design and Wireframes](#design-and-wireframes)
+* [Features](#features)
+* [Technologies](#technologies)
+* [Deployment](#deployment)
+    * [Project Creation](#project-creation)
+    * [Heroku](#using-heroku)
+* [Credits](#credits)
+
+
+## Purpose of the website
+
+## User Experience Design
+
+## UX 5 Planes
+
+### Strategy Plane
+
+
+### Scope Plane
+
+
+### Structure Plane
+
+
+### Surface Plane
+
+
+### Skeleton Plane
+
+
+## Credits
+
 Stock photo source: pexels [https://www.pexels.com/]
 
 photos for products sources:

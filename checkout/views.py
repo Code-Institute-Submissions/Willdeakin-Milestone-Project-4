@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from .forms import OrderForm
+
 # Create your views here.
 
 def checkout(request):
@@ -66,8 +68,8 @@ def checkout(request):
                 })
             except UserProfile.DoesNotExist:
                 order_form = OrderForm()
-        else:
-            order_form = OrderForm()
+    else:
+        order_form = OrderForm()
 
  
     template = 'checkout/index.html'
