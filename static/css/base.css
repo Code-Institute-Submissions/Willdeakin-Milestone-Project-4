@@ -199,11 +199,6 @@ body::-webkit-scrollbar-thumb{
     color: var(--umber);
 }
 
-.card-btn{
-    margin:  auto 1rem auto 1rem;
-    background-color: var(--blue-bell);
-}
-
 .card-category{
     text-transform: uppercase;
     font-family: 'Playfair Display', serif;
@@ -225,6 +220,9 @@ body::-webkit-scrollbar-thumb{
 
 .custom-toast {
     overflow: visible;
+}
+.toast-body{
+    min-width: 10vw;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */

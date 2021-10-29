@@ -20,8 +20,6 @@ class UserProfileForm(forms.ModelForm):
             'default_street_address2': 'Street Address 2',
             'default_county': 'County or State',
             'default_country': 'Country',
-            'default_profile_picture': forms.ImageField(label='Image', required=False, 
-        widget=CustomClearableFileInput),
         }
 
         image = forms.ImageField(label='Image', required=False, 

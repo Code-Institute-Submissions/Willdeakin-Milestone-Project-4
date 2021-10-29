@@ -25,6 +25,7 @@
     <div class="row">
       <div class="col-12">
         <div class="sort-container">
+            Sort By:
           <button class="sort-btn"><a href="{% url 'store' %}?sort=price&direction=asc" class="sort-link">By Price</a></button>
           <button class="sort-btn"><a href="{% url 'store' %}?sort=brand&direction=desc"  class="sort-link">By Brand</a></button>
           <button class="sort-btn"><a href="{% url 'store' %}?sort=category&direction=asc" class="sort-link">By Category</a></button>
@@ -32,4 +33,5 @@
         </div>
       </div>
     </div>
-    </form>
+
+</form>

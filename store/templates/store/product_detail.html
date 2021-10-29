@@ -37,7 +37,7 @@
                     {% endif %}
                     
                     <p class="mt-3">{{ product.description }}</p>
-                    <button class="regular-btn"><form class="form" action="{% url 'add_to_bag' product.id %}" method="POST"></button>
+                    ><form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
                             
@@ -74,7 +74,7 @@
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
-                                    <span class="text-uppercase regular-btn">Keep Shopping</span>
+                                    <span class="text-uppercase">Keep Shopping</span>
                                 </a>
                                 <input type="submit" class="btn upper mt-5" value="Add to Bag">
                             </div>

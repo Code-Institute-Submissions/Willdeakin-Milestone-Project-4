@@ -35,12 +35,10 @@
 </head>
 <body>
 
-  {% include 'includes/navbar.html' %}
+  
 
 
-    <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        All Products
-    </a>
+{% include 'includes/navbar.html' %}
 
 
     {% block page_header %}
@@ -78,6 +76,9 @@
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
+    {% endblock %}
+
+    {% block postloadjs2 %}
     {% endblock %}
 
 </body>
