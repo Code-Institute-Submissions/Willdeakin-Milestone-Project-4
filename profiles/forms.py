@@ -22,11 +22,8 @@ class UserProfileForm(forms.ModelForm):
             'default_country': 'Country',
         }
 
-        image = forms.ImageField(label='Image', required=False, 
-        widget=CustomClearableFileInput)
-
         for field in self.fields:
-                if field != 'default_country' or 'default_profile_picture':
+                if field != 'default_country':
                     if self.fields[field].required:
                         placeholder = f'{placeholders[field]} *'
                     else:

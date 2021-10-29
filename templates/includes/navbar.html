@@ -9,6 +9,8 @@
                     <span class="col-3"><a href="{% url 'store' %}" class="nav-link">Browse Our Selection Of Fitness Equipment</a></span>
                     <span class="col-3 "><a href="{% url 'profile' %}" class="nav-link">Profile</a></span>
                     <span class="col-3"><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></span>
+                    <span class="col-3"><a href="{% url 'blog' %}" class="nav-link">Blog</a></span>
+
                     <span class="session-user">Logged in</span>
                 </div>
               </div>
@@ -20,6 +22,7 @@
                   <span class="col-3"><a href="{% url 'store' %}" class="nav-link">Browse Our Selection Of Fitness Equipment</a></span>
                   <span class="col-3 "><a href="{% url 'account_login' %}" class="nav-link">Login</a></span>
                   <span class="col-3"><a href="{% url 'account_signup' %}" class="nav-link">Register</a></span>
+                  <span class="col-3"><a href="{% url 'blog' %}" class="nav-link">Blog</a></span>
                 </div>
               </div>
         {% endif %}
