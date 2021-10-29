@@ -20,7 +20,7 @@
 {% block content %}
 <div class="row">
 {% if request.user.is_superuser %}
-    <a href="{% url 'add_product'%}" class="add-product">Add a Product</a> 
+    <a href="{% url 'add_product'%}" class="add-product"><button class="regular-btn">Add a Product</button></a> 
 {% endif %}
 </div>
 

@@ -6,5 +6,4 @@ from blog.models import Post
 
 def index(request):
     """ A view to return the index page """
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
     return render(request, 'home/index.html')

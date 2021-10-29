@@ -73,13 +73,10 @@ body::-webkit-scrollbar-thumb{
     text-align: center;
     color:var(--french-bistre);
     border: 1px solid transparent;
-    margin: 0 2rem 0 2rem;
+    margin: 0;
 }
-
 .nav-link:hover{
     color: var(--umber);
-    border: 1px solid var(--umber);
-    background-color: var(--honeydew);
 }
 
 .checkout{
@@ -112,8 +109,13 @@ body::-webkit-scrollbar-thumb{
 .regular-btn{
     margin: auto 1rem auto 1rem;
     background-color: white;
-    border-color: black;
+    border-color: var(--umber);
     border-radius: 5px;
+    color: var(--umber);
+}
+.umber-rule{
+    border-color: var(--umber);
+    width: 100%;
 }
 
 /*---------------------------------------------------Home*/
@@ -132,7 +134,7 @@ body::-webkit-scrollbar-thumb{
     color: var(--umber);
 }
 
-}
+
 
 .carousel-control-next{
     background-color: white;
@@ -284,6 +286,11 @@ body::-webkit-scrollbar-thumb{
     .product-card{
         height: 40vh;
         width:90%;
+    }
+    .nav-link:hover{
+        color: var(--umber);
+        border: 1px solid var(--umber);
+        background-color: var(--honeydew);
     }
 }
 
