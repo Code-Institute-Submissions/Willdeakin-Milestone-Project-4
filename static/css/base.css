@@ -191,6 +191,7 @@ body::-webkit-scrollbar-thumb{
     margin: auto;
     bottom: 1rem;
     background-color: var(--torquise-green);
+    height: auto;
 }
 
 .card-body.hover{

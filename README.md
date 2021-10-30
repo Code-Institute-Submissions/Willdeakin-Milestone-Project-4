@@ -37,13 +37,74 @@ My last Code Institute milestone project concerning Django Frameworks
 ### Skeleton Plane
 
 
+## Features
+
+### Existing features
+- Full CRUD functionality 
+- Log In, Log Out, Register functions 
+
+- Full **Stripe** integration
+- Database querying and sorting all the available products
+- Fully functional Blog section with enabled but supervised user comments
+
+### Features left for future implementation
+- Adding more images for the same product
+- more social features for the blogs section
+- Membership/ subscription model for discounted products etc.
+- Wishlist for customers
+
+
+## Technologies used
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML) for markup
+* [CSS3](https://en.wikipedia.org/wiki/CSS) for style
+* [Python](https://www.python.org/) for backend development
+* [Django](https://www.djangoproject.com/) for frameworks
+* [PostgreSQL](https://www.postgresql.org//) as the database for the website
+* [Git](https://git-scm.com/) for version control
+* [GitHub](https://github.com/) as a remote repository
+* [Bootstrap](https://getbootstrap.com/) for main frame and styling
+* [JavaScript](https://www.javascript.com/) For functionality of some parts of website
+* [Heroku](https://www.heroku.com/) For deployment of the website
+* [Coolors](https://coolors.co/) For help creating a colour scheme
+
+## Resources
+
+* [pixabay](https://pixabay.com/) for images with free license
+* [argos]([https://www.argos.co.uk/) for products and product images used in the store view
+* [musclesquad](https://musclesquad.com/) for products and product images used in the store view
+* [bulk](https://www.bulk.com/uk/) for products and product images used in the store view
+* [myprotein](https://www.myprotein.com/) for products and product images used in the store view
+* [gravity fitness ](https://www.gravityfitness.co.uk/shop/) for products and product images used in the store view
+* [Code Institute](https://codeinstitute.net/) course materials
+* [MDN](https://developer.mozilla.org/en-US/) general help and pointers
+* [Stackoverflow](https://stackoverflow.com/) general help and pointers
+* [Youtube](https://www.youtube.com/) general help and pointers
+* [W3schools](https://www.w3schools.com/) general help and pointers
+* [Am I Responsive](http://ami.responsivedesign.is/) for a responsive image in Read Me
+* [LogoMakr](https://logomakr.com/) for creation of the logo
+* [Google](https://www.google.ie/) general help
+* [DJANGOCENTRAL](https://djangocentral.com/) for help with blog application
+* [Google Fonts](https://fonts.google.com/) for the font used throughout the website
+* [Font Awesome](https://fontawesome.com/) for icons
+* [Stripe](https://stripe.com/ie) for help with payments integration
+* [AmazonWebServices-AWS](https://aws.amazon.com/) for hosting static and media files
+
+
+## Database
+During the development **sqlite3** database was used which is installed with **Django**.
+
+All databases were created by adding to the models.py file in their respective apps then using CLI to make migrations and migrate.
+
+For deployment(production), a PostgreSQL database is provided by Heroku as an add-on.
+
+Fixtures for the products are taken from the **Code Institute** course material and altered
+to better fit this project. 
+
+
+
 ## Credits
 
-Stock photo source: pexels [https://www.pexels.com/]
 
-photos for products sources:
-argos [https://www.argos.co.uk/?&_$ja=tsid:11705%7cacid:224-060-0086%7ccid:94668565%7cagid:4507124965%7ctid:aud-981244005758:kwd-18880610%7ccrid:535779513013%7cnw:g%7crnd:16932073886562722237%7cdvc:c%7cadp:%7cmt:e%7cloc:1007320&utm_source=Google&utm_medium=cpc&utm_campaign=94668565&utm_term=argos&utm_content=text&utm_custom1=4507124965&utm_custom2=224-060-0086&cmpid=GG05X&gclid=Cj0KCQjw8eOLBhC1ARIsAOzx5cHOSrQH06OMmhvWARkD0nvza1YwTcyXYudJy6OgQ774cBs-t0GP5XYaAvzTEALw_wcB&gclsrc=aw.ds]
-musclesquad [https://musclesquad.com/]
-bulk [https://www.bulk.com/uk/?gclid=Cj0KCQjw8eOLBhC1ARIsAOzx5cEBR6SrcplwZuA34eoNZLY-oVoCSE3jAMvZ4ywd5ttsT_VAN1YvQ2UaAlRgEALw_wcB]
-myprotein [https://www.myprotein.com/?affil=awin&utm_content=http%3A%2F%2Fwww.linkhaitao.com&utm_term=Sub+Networks&utm_source=AWin-251239&utm_medium=affiliate&utm_campaign=AffiliateWin&sv_campaign_id=251239&sv_tax1=affiliate&sv_tax2=86523&sv_tax3=Linkhaitao.com&sv_tax4=0&awc=3196_1635337419_11fb9f252d31d090065796f99a6591e1]
-gravity fitness [https://www.gravityfitness.co.uk/shop/?gclid=Cj0KCQjw8eOLBhC1ARIsAOzx5cEosB0wsi4CZZa9UCCzANZrbToUs2KnwgGtkQN46lvu1Lq1qcSVv_MaAtSmEALw_wcB]
+
+
