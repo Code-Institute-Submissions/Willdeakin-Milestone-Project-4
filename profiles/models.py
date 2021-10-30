@@ -5,12 +5,12 @@ from django.dispatch import receiver
 
 from django_countries.fields import CountryField
 
-# Create your models here.
-
 
 class UserProfile(models.Model):
-    """ User profile model for order information, order history and social profile"""
-
+    """
+    A user profile model for maintaining default
+    delivery information and order history
+    """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     default_phone_number = models.CharField(max_length=20, null=True, blank=True)
     default_street_address1 = models.CharField(max_length=80, null=True, blank=True)
@@ -26,7 +26,9 @@ class UserProfile(models.Model):
 
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
-    """ Create or update the user profile """
+    """
+    Create or update the user profile
+    """
     if created:
         UserProfile.objects.create(user=instance)
     # Existing users: just save the profile

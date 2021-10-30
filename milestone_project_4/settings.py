@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
@@ -118,8 +119,8 @@ WSGI_APPLICATION = 'milestone_project_4.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+   DATABASES = {
+       'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
     DATABASES = {
@@ -128,6 +129,8 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
+
+#DATABASES = {'default': dj_database_url.parse('postgres://txuuazrvselxkw:47fb6285a25343843174db4ce792a26bbb07feef4a41cdd1307fcf8fa6ac5e45@ec2-54-195-246-55.eu-west-1.compute.amazonaws.com:5432/d64ueenau0apv1')}
 
 
 # Password validation
