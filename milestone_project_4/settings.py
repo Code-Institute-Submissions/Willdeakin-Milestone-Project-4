@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://milestone-project-4-willdeakin.herokuapp.com/', 'localhost']
 
 
 # Application definition
@@ -129,7 +129,7 @@ else:
         }
     }
 
-#DATABASES = {'default': dj_database_url.parse('postgres://txuuazrvselxkw:47fb6285a25343843174db4ce792a26bbb07feef4a41cdd1307fcf8fa6ac5e45@ec2-54-195-246-55.eu-west-1.compute.amazonaws.com:5432/d64ueenau0apv1')}
+
 
 
 # Password validation

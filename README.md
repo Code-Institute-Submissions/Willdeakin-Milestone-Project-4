@@ -70,6 +70,8 @@ My last Code Institute milestone project concerning Django Frameworks
 
 ## Resources
 
+
+* [My Fitness Pal](https://blog.myfitnesspal.com/) for blogs posted in the blog view
 * [pixabay](https://pixabay.com/) for images with free license
 * [argos]([https://www.argos.co.uk/) for products and product images used in the store view
 * [musclesquad](https://musclesquad.com/) for products and product images used in the store view
@@ -77,12 +79,10 @@ My last Code Institute milestone project concerning Django Frameworks
 * [myprotein](https://www.myprotein.com/) for products and product images used in the store view
 * [gravity fitness ](https://www.gravityfitness.co.uk/shop/) for products and product images used in the store view
 * [Code Institute](https://codeinstitute.net/) course materials
-* [MDN](https://developer.mozilla.org/en-US/) general help and pointers
 * [Stackoverflow](https://stackoverflow.com/) general help and pointers
 * [Youtube](https://www.youtube.com/) general help and pointers
 * [W3schools](https://www.w3schools.com/) general help and pointers
 * [Am I Responsive](http://ami.responsivedesign.is/) for a responsive image in Read Me
-* [LogoMakr](https://logomakr.com/) for creation of the logo
 * [Google](https://www.google.ie/) general help
 * [DJANGOCENTRAL](https://djangocentral.com/) for help with blog application
 * [Google Fonts](https://fonts.google.com/) for the font used throughout the website
