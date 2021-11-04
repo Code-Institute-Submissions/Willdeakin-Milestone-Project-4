@@ -1,4 +1,3 @@
-
 # Milestone-Project-4
 My last Code Institute milestone project concerning Django Frameworks
 
@@ -104,7 +103,6 @@ to better fit this project.
 
 
 ## Credits
-
 
 
 
