@@ -35,6 +35,9 @@ def cache_checkout_data(request):
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+    current_bag = bag_contents(request)
+    total = current_bag['grand_total']
+    print(total)
     if request.method == 'POST':
         bag = request.session.get('bag', {})
 
@@ -56,6 +59,7 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
+            order.grand_total = total
             order.save()
             for item_id, item_data in bag.items():
                 try:
@@ -88,9 +92,6 @@ def checkout(request):
             messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
-        current_bag = bag_contents(request)
-        total = current_bag['grand_total']
-        print(total)
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(

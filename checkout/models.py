@@ -36,7 +36,6 @@ class Order(models.Model):
         """
         return uuid.uuid4().hex.upper()
     
-
     def update_total(self):
         """
         Update grand total each time a line item is added, 
@@ -74,4 +73,4 @@ class OrderLineItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'SKU {self.product.sku} on order {self.order.order_number}'
+        return f'Product {self.product.product} on order {self.order.order_number}'
