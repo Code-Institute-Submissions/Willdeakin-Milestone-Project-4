@@ -130,34 +130,42 @@ body::-webkit-scrollbar-thumb{
     margin: auto;
     height: 65vh;
 }
-
 .carousel-item img{
     height: 65vh;
 }
-
 .carousel-control-prev{
     background-color: white;
     color: var(--umber);
 }
-
-
-
 .carousel-control-next{
     background-color: white;
     color: var(--umber);
 
 }
-
 .carousel-text{
     color: var(--umber);
 }
-
 .home-title{
     text-align: center;
     font-family: 'Playfair Display', serif;
     color: var(--umber);
 }
-
+.home-text{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: var(--umber);
+}
+.home-btn{
+    width: 30%;
+    position: absolute;
+    left: 35%;
+    font-size: 1.5rem;
+}
+.home-product-card{
+    margin: 3rem auto 3rem auto;
+    border: none;
+    width: 60%;
+}
 
 /*---------------------------------------------------Store*/
 .sort-container{

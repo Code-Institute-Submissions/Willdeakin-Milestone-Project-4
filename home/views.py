@@ -1,9 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from blog.models import Post
+from store.models import Products
+
 
 # Create your views here.
 
 def index(request):
     """ A view to return the index page """
-    return render(request, 'home/index.html')
+    products = Products.objects.all()
+    home_nums = [5, 10]
+    context = {
+        'products': products,
+        'home_nums': home_nums,
+    }
+    return render(request, 'home/index.html', context)
