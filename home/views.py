@@ -8,7 +8,7 @@ from store.models import Products
 def index(request):
     """ A view to return the index page """
     products = Products.objects.all()
-    home_nums = [5, 10]
+    home_nums = [10]
     context = {
         'products': products,
         'home_nums': home_nums,
