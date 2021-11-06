@@ -46,6 +46,9 @@ body::-webkit-scrollbar-thumb{
     border: 0.1rem solid var(--torquise-green);
     border-radius: 100vw;
 }
+.row-margin{
+    margin: 0 0 3rem 0;
+}
 /*---------------------------------------------------Navbar*/
 .nav-wrapper{
     background-color: var(--torquise-green);
@@ -149,6 +152,11 @@ body::-webkit-scrollbar-thumb{
     color: var(--umber);
 }
 
+.home-title{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: var(--umber);
+}
 
 
 /*---------------------------------------------------Store*/
@@ -159,7 +167,6 @@ body::-webkit-scrollbar-thumb{
     display:inline-block;
     margin: 1rem 0 1rem 0;
     background-color: white;
-    border-color: black;
     border-radius: 5px;
 }
 .sort-link{
@@ -171,10 +178,10 @@ body::-webkit-scrollbar-thumb{
     color: var(--umber);
 }
 .product-card{
-    width: 80%;
-    margin: 2rem auto 2rem auto;
-    height: 60vh;
+    margin: 3rem auto 3rem auto;
+    height: 50vh;
     border: none;
+    width: 80%;
 }
 
 .product-card:hover{
@@ -182,14 +189,14 @@ body::-webkit-scrollbar-thumb{
 }
 
 .card-img-top{
-    width:70%;
+    width:60%;
     display: block;
     margin: auto;
     border:1px var(--umber);
 }
 
 .card-body-store{
-    width:70%;
+    width:60%;
     display: block;
     margin: auto;
     bottom: 1rem;
@@ -279,9 +286,7 @@ body::-webkit-scrollbar-thumb{
 /*---------------------------------------------------Media Queries*/
 
 @media (min-width: 576px){
-    .product-card{
-        height: 50vh;
-    }
+
 
 }
 
@@ -295,22 +300,33 @@ body::-webkit-scrollbar-thumb{
     .main-title{
         margin: 7rem 0 0 1rem;
     }
-    .product-card{
-        height: 40vh;
-        width:90%;
-    }
     .nav-link:hover{
         color: var(--umber);
         border: 1px solid var(--umber);
         background-color: var(--honeydew);
     }
+    .product-card{
+        margin: 1rem auto 1rem auto;
+        height: 60vh;
+    }
 }
 
 @media (min-width: 992px){
-    .product-card{
-        width:80%;
-    }
     .nav-link{
         margin: 0 5rem 0 5rem;
     }
+    .product-card{
+        margin: 1rem auto 1rem auto;
+        height: 60vh;
+    }
+    .card-img-top{
+        width:80%;
+    }
+    .card-body-store{
+        width:70%;
+    }
+}
+
+@media (min-width: 1200px){
+
 }

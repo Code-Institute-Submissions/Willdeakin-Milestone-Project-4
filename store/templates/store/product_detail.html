@@ -23,30 +23,30 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.product }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                    <hr class="umber-rule">
+                    <p class="lead mb-0 text-left font-weight-bold card-text">£{{ product.price }}</p>
                     
                     {% if product.serving %}
-                        <p>This product comes as a {{ product.serving }} packet</p>
+                        <p class="card-text">This product comes as a {{ product.serving }} packet</p>
                     {% endif %}
                     
                     {% if product.adjustable == "adjustable dumbbell" %}
-                        <p>This weight is an {{ product.adjustable }}</p>
+                        <p class="card-text">This weight is an {{ product.adjustable }}</p>
                     {% elif product.adjustable %}
-                        <p>This weight is a {{ product.adjustable }}</p>
+                        <p class="card-text">This weight is a {{ product.adjustable }}</p>
                     {% endif %}
                     
-                    <p class="mt-3">{{ product.description }}</p>
-                    ><form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                    <p class="card-text">{{ product.description }}</p>
+                    <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
                             
                             <div class="col-12">
-                                <p class="mt-3"><strong>Quantity:</strong></p>
+                                <p class="card-text"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty" 
+                                            <button class="decrement-qty regular-btn" 
                                                 data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
                                                 <span class="icon">
                                                     <i class="fas fa-minus"></i>
@@ -58,7 +58,7 @@
                                             data-item_id="{{ product.id }}"
                                             id="id_qty_{{ product.id }}">
                                         <div class="input-group-append">
-                                            <button class="increment-qty"
+                                            <button class="increment-qty regular-btn"
                                                 data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
                                                 <span class="icon">
                                                     <i class="fas fa-plus"></i>
@@ -70,13 +70,13 @@
                             </div>
 
                             <div class="col{% if s %}-12 mt-2{% endif %}">
-                                <a href="{% url 'store' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                <a href="{% url 'store' %}" class="btn regular-btn rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn upper mt-5" value="Add to Bag">
+                                <input type="submit" class="btn upper mt-5 regular-btn" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>

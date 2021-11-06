@@ -87,7 +87,7 @@
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'store' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                    <a href="{% url 'store' %}" class="btn btn-lg">
                                         <button class="regular-btn">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
@@ -95,12 +95,13 @@
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </button>
                                     </a>
+                                    
+                                    <a href="{% url 'checkout' %}" class="btn btn-lg">
                                     <button class="regular-btn">
-                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
-                                        <span class="text-uppercase">Secure Checkout</span>
-                                        <span class="icon">
-                                            <i class="fas fa-lock"></i>
-                                        </span>
+                                        <span>Checkout</span>
+                                            <span class="icon">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
                                     </button>
                                     </a>
                                 </td>
