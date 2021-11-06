@@ -8,7 +8,7 @@
 <div class="container header-container">
     <div class="row">
         <div class="col main-title">
-            <h1 class="">Blog</h1>
+            <h1 >Blog</h1>
             <hr class="umber-rule">
         </div>
     </div>
@@ -16,12 +16,12 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 col-md-8">
+        <div class="col-12">
         <!-- Blog Entries Column -->
             {% for post in post_list %}
             <div class="card mb-4">
                 <div class="card-body">
-                    <h2 class="card-title">{{ post.title }}</h2>
+                    <h2 class="blog-title">{{ post.title }}</h2>
                     <hr class="umber-rule">
                     <p class="card-text h6">{{ post.author }} | {{ post.created_on}} </p>
                     <p class="card-text">{{post.content|slice:":200" }}</p>
