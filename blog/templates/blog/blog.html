@@ -23,9 +23,9 @@
                 <div class="card-body">
                     <h2 class="blog-title">{{ post.title }}</h2>
                     <hr class="umber-rule">
-                    <p class="card-text h6">{{ post.author }} | {{ post.created_on}} </p>
-                    <p class="card-text">{{post.content|slice:":200" }}</p>
-                    <a href="{% url 'post_detail' post.slug  %}" class="btn regular-btn">Read More &rarr;</a>
+                    <p class="umber-text h6">{{ post.author }} | {{ post.created_on}} </p>
+                    <p class="umber-text">{{post.content|slice:":200" }}...</p>
+                    <a href="{% url 'post_detail' post.slug  %}" class="btn regular-btn">Read More <i class="fas fa-chevron-right"></i></a>
                 </div>
             </div>
             

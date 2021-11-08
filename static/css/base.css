@@ -101,9 +101,6 @@ body::-webkit-scrollbar-thumb{
 .session-user{
     color: white;
 }
-.fa-search{
-    color: var(--umber);
-}
 
 /*---------------------------------------------------Content*/
 .main-title{
@@ -123,6 +120,9 @@ body::-webkit-scrollbar-thumb{
     border-color: var(--umber);
     width: 100%;
 }
+.umber-text{
+    color: var(--umber);
+}
 
 /*---------------------------------------------------Home*/
 .carousel-container{
@@ -141,9 +141,6 @@ body::-webkit-scrollbar-thumb{
     background-color: white;
     color: var(--umber);
 
-}
-.carousel-text{
-    color: var(--umber);
 }
 .home-title{
     text-align: center;
@@ -215,11 +212,6 @@ body::-webkit-scrollbar-thumb{
 .card-body.hover{
     background-color: var(--honeydew);
 }
-
-.card-text{
-    color: var(--umber);
-}
-
 .card-category{
     text-transform: uppercase;
     font-family: 'Playfair Display', serif;

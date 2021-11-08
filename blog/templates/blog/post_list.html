@@ -3,15 +3,19 @@
 {% load crispy_forms_tags %}
 
 
-{% block content %}
+{% block post_list_content %}
+{% if request.get_full_path == "https://8000-apricot-wildcat-94unz59b.ws-eu18.gitpod.io/blog/" or request.get_full_path == "https://milestone-project-4-willdeakin.herokuapp.com/blog/" %}
+    <div class="d-none">
+{% endif %}
+        
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-12 card mb-4 top">
               <div class="card-body">
                 <h1 class="blog-title">{% block title %} {{ post.title }} {% endblock title %}</h1>
-                <p class="card-text h6">{{ post.author }} | {{ post.created_on }}</p>
-                <p class="card-text ">{{ post.content | safe }}</p>
+                <p class="umber-text h6">{{ post.author }} | {{ post.created_on }}</p>
+                <p class="umber-text ">{{ post.content | safe }}</p>
             </div>
   
             </div>
@@ -19,22 +23,26 @@
             <div class="col-12 card mb-4 ">
                 <div class="card-body">
                     {% with comments.count as total_comments %}
+                    {% if total_comments == 1 %}
+                        <h2 class="blog-title">{{ total_comments }} comment</h2>
+                    {% else %}
                         <h2 class="blog-title">{{ total_comments }} comments</h2>
+                    {% endif %}
 
                     <p>
                     {% endwith %} {% for comment in comments %}
                     </p>
 
-                    <div class="comments card-text" style="padding: 10px;">
-                        <p class="card-text h6">
+                    <div class="comments umber-text" style="padding: 10px;">
+                        <p class="umber-text h6">
                             {{ comment.name }}
-                            <span class="card-text h6">
+                            <span class="umber-text h6">
                                     {{ comment.created_on }}
                                 </span>
                         </p>
                         {{ comment.body | linebreaks }}
                     </div>
-
+                    {{ request.get_full_path }}
                 {% endfor %}
                 </div>
             </div>
@@ -56,5 +64,9 @@
             </div>
         </div>
     </div>
+
+{% if request.get_full_path == "https://8000-apricot-wildcat-94unz59b.ws-eu18.gitpod.io/blog/" or request.get_full_path == "https://milestone-project-4-willdeakin.herokuapp.com/blog/" %}
+</div>
+{% endif %}
 
 {% endblock %}

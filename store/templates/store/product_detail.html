@@ -24,25 +24,25 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
                     <hr class="umber-rule">
-                    <p class="lead mb-0 text-left font-weight-bold card-text">£{{ product.price }}</p>
+                    <p class="lead mb-0 text-left font-weight-bold umber-text">£{{ product.price }}</p>
                     
                     {% if product.serving %}
-                        <p class="card-text">This product comes as a {{ product.serving }} packet</p>
+                        <p class="umber-text">This product comes as a {{ product.serving }} packet</p>
                     {% endif %}
                     
                     {% if product.adjustable == "adjustable dumbbell" %}
-                        <p class="card-text">This weight is an {{ product.adjustable }}</p>
+                        <p class="umber-text">This weight is an {{ product.adjustable }}</p>
                     {% elif product.adjustable %}
-                        <p class="card-text">This weight is a {{ product.adjustable }}</p>
+                        <p class="umber-text">This weight is a {{ product.adjustable }}</p>
                     {% endif %}
                     
-                    <p class="card-text">{{ product.description }}</p>
+                    <p class="umber-text">{{ product.description }}</p>
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
                             
                             <div class="col-12">
-                                <p class="card-text"><strong>Quantity:</strong></p>
+                                <p class="umber-textt"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
                                         <div class="input-group-prepend">

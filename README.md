@@ -153,9 +153,16 @@ Administrator of the website needs to approve each one of the comments in the ad
 If the comment is not approved it will not be displayed.
 
 ### Surface Plane
+The website has been designed with an emphasis on the store app.
+Throughout the website the colour scheme stays consistent with white, black and 2 accenting shades of green and brown for most elements throughout each app.
+
+#### Typography
+I have used Playfair Display from google fonts to style the page headings in brown.
 
 
 ### Skeleton Plane
+This website has been designed to be accessible and aesthetic at all screen sizes.
+
 
 
 ## Features
@@ -194,7 +201,7 @@ If the comment is not approved it will not be displayed.
 
 * [My Fitness Pal](https://blog.myfitnesspal.com/) for blogs posted in the blog view
 * [pixabay](https://pixabay.com/) for images with free license
-* [argos]([https://www.argos.co.uk/) for products and product images used in the store view
+* [Argos](https://www.argos.co.uk/) for products and product images used in the store view
 * [musclesquad](https://musclesquad.com/) for products and product images used in the store view
 * [bulk](https://www.bulk.com/uk/) for products and product images used in the store view
 * [myprotein](https://www.myprotein.com/) for products and product images used in the store view
@@ -210,6 +217,47 @@ If the comment is not approved it will not be displayed.
 * [Font Awesome](https://fontawesome.com/) for icons
 * [Stripe](https://stripe.com/ie) for help with payments integration
 * [AmazonWebServices-AWS](https://aws.amazon.com/) for hosting static and media files
+
+## Testing
+Testing has been documented in [Testing.md](/Testing.md)
+
+## Version Control
+
+### Git and GitHub
+
+I used [GitHub](https://github.com/) as a remote repository and development environment. To produce this project with version control I:
+
+* Created a new repository on GitHub named Milestone-Project-4
+* Git add .; to add all files to the staging area
+* Git commit -m "*message detailing the changes from the last version*"; to commit changes from the staging area to the local repository
+* Git push; to push committed changes from the local repository to the Github repository
+* Work is now committed to the master branch
+
+## Deployment
+
+This project requires back-end technologies, so for the deployment I used [Heroku](https://www.heroku.com/), a cloud platform where users can host their projects.
+For the purpose of this project the free version was suitable. A PostgreSQL database was selected from free Heroku addons. 
+For hosting of static files and media files I used an AWS S3 bucket on a free plan.
+
+Heroku setup:
+- I created a new app by clicking on *New* and then *Create new app*
+- I named the new app milestone-project-4-willdeakin and chose the region europe
+- Provision PostgreSQL database from heroku add-ons
+
+Steps I took before deployment:
+
+- I connected my the PostgreSQL database by changing the DEFAULT_DATABASE in my settings to DATABASE_URL and setting the environment variable in Heroku to the PostgreSQL URL
+- I imported the database fixtures by creating a file db.json with all the information in, which I then moved across using python3 manage.py loaddata
+- I Installed gunicorn via pip3 install, allowing it to act as a webserver
+- I froze all requirements using pip2 freeze > requirements.txt so that Heroku could load all dependencies upon deployment
+- I created a Procfile such that Heroku knows the necessary details to deploy correctly
+- I disabled collectstatic so no static files were added, as these are going in the AWS S3 bucket.
+- I added the host name of my Heroku app to settings.py
+
+Before enabling automatic deploys, I had to set Config Vars in settings for the database URL, stipe keys etc.
+After adding all the necessary Config Vars, I enabled automatic deploys such that every subsequent push in my linked GitHub would push to Heroku also.
+- Every time the app deploys, this is seen in the Activity tab.
+
 
 
 ## Database

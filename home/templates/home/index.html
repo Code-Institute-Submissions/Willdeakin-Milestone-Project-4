@@ -56,11 +56,11 @@
                     </div>
                     <button class="carousel-control-prev" type="button" data-target="#homecarousel" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="carousel-text">Previous</span>
+                    <span class="umber-text">Previous</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-target="#homecarousel" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="carousel-text">Next</span>
+                    <span class="umber-text">Next</span>
                     </button>
                     </div>
                 </div>
@@ -68,9 +68,23 @@
 
             <div class=" col-12 col-lg-6 col-xl-4">
                 <h1 class="home-title">What we're about</h1>
-                <p class="card-text">We believe that everyone should be able to get fit in the comfort of their own home. 
+                <p class="umber-text">We believe that everyone should be able to get fit in the comfort of their own home. 
                     To that end we provide a number of great products that can be used for achieving your fitness goals; whether it be stamina, strength or just improving your physique we have something to help you.</p>
-                <p class="card-text">We also host a blog which is focused around helping to coach and improve your form on exercises that don't require any equipment. </p>
+                <p class="umber-text">We also host a blog which is focused around helping to coach and improve your form on exercises that don't require any equipment at all! </p>
+
+                {% for post in posts %}
+                {% if post.id == 2 or post.id == 3 %}
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="blog-title">{{ post.title }}</h2>
+                            <hr class="umber-rule">
+                            <p class="umber-text h6">{{ post.author }} | {{ post.created_on}} </p>
+                            <p class="umber-text">{{post.content|slice:":200" }}...</p>
+                            <a href="{% url 'post_detail' post.slug  %}" class="btn regular-btn">Read More <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                {% endif %}
+                {% endfor %}
 
                 <a href="{% url 'blog' %}"><button class="regular-btn home-btn">Take a look at our blog</button></a>
 
@@ -82,7 +96,7 @@
 
                 <div class="row">
                     {% for product in products %}
-                    {% if product.id in home_nums %}
+                    {% if product.id == 10 %}
                     <div class="col-12">
                         <div class="card home-product-card" >
                             <div class="container">
@@ -94,9 +108,9 @@
                                 
                                 {% endif %}
                                 <div class=" card-body card-body-store">
-                                    <p class="card-category card-text h5">{{ product.category }}</p>
-                                    <p class="card-text">{{ product.brand }} {{ product.product }}</p>
-                                    <p class="card-text">£{{ product.price }}</p>
+                                    <p class="card-category umber-text h5">{{ product.category }}</p>
+                                    <p class="umber-text">{{ product.brand }} {{ product.product }}</p>
+                                    <p class="umber-text">£{{ product.price }}</p>
                                     <div class="row">
                                         <a href="{% url 'product_detail' product.id %}" class=""><button class="regular-btn">Product Details</button></a>
                                     </div>
