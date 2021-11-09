@@ -101,7 +101,46 @@ Some app pages are only accessible to authorised users and/or superusers for sec
 ## Browser testing
 
 
+## Functionality of the website
+1. Responsiveness
+- the website is responsive due to use of the bootstrap library and media queries in the base css file.
+
+2. Links   
+- The website has a number of links which work internally, allowing access to multiple apps and pages of this project.
+
+3. Buttons
+- The website has non-link buttons implemented in the store and bag for adjusting incrementing and decrementing a form value.
+These work as intended.
+
+4. Forms
+- All forms work as intended and interact with the database.
+
+5. Database
+- The database works as intended when POSTing and GETting.
+
+6. Deployment
+- The website's latest version is deployed on Heroku from github and auto deploys when a git push is made.
+
+7. AWS Amazon Web Services
+- The website's static and media files are hosted on AWS in a S3 bucket.
+
+8. Sorting and Searching
+- The website has sort buttons and a searchbar which work as intended.
+
 ## Bugs, Errors, Issues and Fixes
+I have encountered multiple issues throughout the creation and testing of this website:
 
 - When using the W3C validator to validate my HTML, I received a number of errors regarding button elements sat inside anchor tags. 
 I fixed this simply by removing the buttons and adding the lasses btn and regular-btn to my anchor tags.
+
+- Upon checking out and receiving webhooks from stripe, the checkout view wouldn't progress to checkout_success.
+This was eventually tracked down to the send_mail function in webhook_handler.py which stopped the checkout dead when run on gitpod, as this is a feature only available on heroku and not gitpod.
+
+- When loading my blog page, multiple cards from the post_list page were rendering, which was a simple fix in which i wrapped the post_list content inside a d-none container which only renders in the blog view.
+
+- When loading my db to Heroku, I received an error for Orders having incorrect fields, as I had changed and migrated these changes.
+I ended up manually deleting these from the db.json file.
+
+- I have had multiple issues with loading/ importing the relevant database, library etc.
+For example, I have had an issue with crispy forms where I loaded a superfluous library which was stopping my crispy forms from working.
+I had to remove this library and roll back django-crispy-forms from 1.13.0 to 1.11.0.

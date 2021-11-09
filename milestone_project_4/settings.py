@@ -112,6 +112,7 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
+DATABASE_URL = 'postgres://txuuazrvselxkw:47fb6285a25343843174db4ce792a26bbb07feef4a41cdd1307fcf8fa6ac5e45@ec2-54-195-246-55.eu-west-1.compute.amazonaws.com:5432/d64ueenau0apv1'
 
 WSGI_APPLICATION = 'milestone_project_4.wsgi.application'
 
