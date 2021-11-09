@@ -269,5 +269,5 @@ to better fit this project.
 
 ## Credits
 
-
+Thanks to my mentor Spencer for his help and advice throughout
 

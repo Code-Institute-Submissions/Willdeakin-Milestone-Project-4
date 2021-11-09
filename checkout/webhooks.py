@@ -19,8 +19,6 @@ def webhook(request):
     payload = request.body
     sig_header = request.META['HTTP_STRIPE_SIGNATURE']
     event = None
-    
-    print("webhook picking up post")
 
     try:
         event = stripe.Webhook.construct_event(
@@ -46,12 +44,10 @@ def webhook(request):
 
     # Get the webhook type from Stripe
     event_type = event['type']
-    print(event_type)
     # If there's a handler for it, get it from the event map
     # Use the generic one by default
     event_handler = event_map.get(event_type, handler.handle_event)
 
     # Call the event handler with the event
     response = event_handler(event)
-    print("response", response)
     return response

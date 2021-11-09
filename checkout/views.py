@@ -37,12 +37,8 @@ def checkout(request):
     stripe_secret_key = settings.STRIPE_SECRET_KEY
     current_bag = bag_contents(request)
     total = current_bag['grand_total']
-    print(total)
-    print("before post")
-    print(request.method)
     if request.method == 'POST':
         bag = request.session.get('bag', {})
-        print("before form data")
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -54,10 +50,8 @@ def checkout(request):
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
         }
-        print("form data done")
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            print("is valid")
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
@@ -74,7 +68,6 @@ def checkout(request):
                             quantity=item_data,
                         )
                         order_line_item.save()
-                        print("saved order line item")
                 except Products.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database. "
@@ -82,7 +75,6 @@ def checkout(request):
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
-            print("got to save")
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
