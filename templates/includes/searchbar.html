@@ -27,10 +27,10 @@
       <div class="col-12">
         <div class="sort-container">
             Sort By:
-          <button class="regular-btn sort-btn"><a href="{% url 'store' %}?sort=price&direction=asc" class="sort-link">By Price</a></button>
-          <button class="regular-btn sort-btn"><a href="{% url 'store' %}?sort=brand&direction=desc"  class="sort-link">By Brand</a></button>
-          <button class="regular-btn sort-btn"><a href="{% url 'store' %}?sort=category&direction=asc" class="sort-link">By Category</a></button>
-          <button class="regular-btn sort-btn"><a href="{% url 'store' %}" class="sort-link">All Products</a></button>
+          <a href="{% url 'store' %}?sort=price&direction=asc" class="sort-link btn regular-btn sort-btn">By Price</a>
+          <a href="{% url 'store' %}?sort=brand&direction=desc"  class="sort-link btn regular-btn sort-btn">By Brand</a>
+          <a href="{% url 'store' %}?sort=category&direction=asc" class="sort-link btn regular-btn sort-btn">By Category</a>
+          <a href="{% url 'store' %}" class="sort-link btn regular-btn sort-btn">All Products</a>
         </div>
       </div>
     </div>

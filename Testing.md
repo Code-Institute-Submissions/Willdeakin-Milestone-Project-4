@@ -55,7 +55,38 @@ Store Owner User Stories
 |3|  The store owner can add new superusers in the admin view or approve existing users to become a superuser to allow administrative access	|
 |4|  The store owner can add new blogs in the admin view and has access to edit and delete them also	|
 
+### Code Validation
 
+#### HTML
+
+- All HTML pages have been run through the W3C Markup Validation Surface. 
+All remaining errors are consequence of the django frameworks: errors for a missing DOCTYPE which is in the base or returning a bad vale for a url in {%%} brackets etc.
+
+#### CSS
+
+All CSS Pages have been run through the W3C CSS Validation Service, no errors were given and all warnings are listed below.
+
+- -webkit-transition is a vendor extension
+- ::-webkit-scrollbar is a vendor extended pseudo-element
+- ::-webkit-scrollbar-track is a vendor extended pseudo-element
+- ::-webkit-scrollbar-thumb is a vendor extended pseudo-element
+Which have been ignored as these don't have any bearing on anything other than the side scroller, and if that doesn't work on any device/ browser it won't badly affect the website experience.
+
+#### Javascript
+
+Javascript files have been run through [JSHint](https://jshint.com/), 2 warnings were given from stripe-elements.js:
+- Line 27	'template literal syntax' is only available in ES6 (use 'esversion: 6').
+- Line 90	'template literal syntax' is only available in ES6 (use 'esversion: 6').
+There are also 2 undefined variables $ and Stripe; $ is used in jquery and thus can be ignored, and Stripe is used for stripe functionality and can also be ignored.
+
+#### Python
+
+Python files have been run through [Extends Class Python Tester](https://extendsclass.com/python-tester.html) and a few files returned syntax errors; all of which were regarding f strings, which can be ignored.
+
+#### Form Validation
+
+All the forms are validated with HTML. Manual testing has been carried out for the forms to confirm they are working
+correctly.
 
 ### Defensive programming
 
@@ -72,3 +103,5 @@ Some app pages are only accessible to authorised users and/or superusers for sec
 
 ## Bugs, Errors, Issues and Fixes
 
+- When using the W3C validator to validate my HTML, I received a number of errors regarding button elements sat inside anchor tags. 
+I fixed this simply by removing the buttons and adding the lasses btn and regular-btn to my anchor tags.

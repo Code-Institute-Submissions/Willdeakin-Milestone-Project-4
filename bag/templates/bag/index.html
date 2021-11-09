@@ -24,11 +24,11 @@
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
                                 <tr>
-                                    <th scope="col">Product Info</th>
+                                    <th scope="col"><p class="umber-text">Product Info</p></th>
                                     <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
-                                    <th scope="col">Subtotal</th>
+                                    <th scope="col"><p class="umber-text">Price</p></th>
+                                    <th scope="col"><p class="umber-text">Qty</p></th>
+                                    <th scope="col"><p class="umber-text">Subtotal</p></th>
                                 </tr>
                             </thead>
 
@@ -38,10 +38,10 @@
                                         <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">Product: {{ item.product.product|upper }}</p>
+                                        <p class="my-0 umber-text">Product: {{ item.product.product|upper }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">£{{ item.product.price }}</p>
+                                        <p class="my-0 umber-text">£{{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
                                         <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
@@ -49,7 +49,7 @@
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                                                        <button class="decrement-qty btn regular-btn" 
                                                             data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                             <span>
                                                                 <i class="fas fa-minus fa-sm"></i>
@@ -61,7 +61,7 @@
                                                         data-item_id="{{ item.item_id }}"
                                                         id="id_qty_{{ item.item_id }}">
                                                     <div class="input-group-append">
-                                                        <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                                        <button class="increment-qty btn regular-btn"
                                                             data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                             <span>
                                                                 <i class="fas fa-plus fa-sm"></i>
@@ -75,34 +75,29 @@
                                             <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}">Remove</a>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                        <p class="my-0 umber-text">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
-                                    <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                                    <h4 class="mt-4 umber-text"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'store' %}" class="btn btn-lg">
-                                        <button class="regular-btn">
+                                    <a href="{% url 'store' %}" class="btn regular-btn">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
-                                    </button>
                                     </a>
                                     
-                                    <a href="{% url 'checkout' %}" class="btn btn-lg">
-                                    <button class="regular-btn">
+                                    <a href="{% url 'checkout' %}" class="btn regular-btn">
                                         <span>Checkout</span>
                                             <span class="icon">
                                                 <i class="fas fa-lock"></i>
                                             </span>
-                                    </button>
                                     </a>
                                 </td>
                             </tr>
@@ -110,8 +105,7 @@
                     </div>
                 {% else %}
                     <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'store' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <button class="regular-btn">
+                    <a href="{% url 'store' %}" class="btn regular-btn">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>

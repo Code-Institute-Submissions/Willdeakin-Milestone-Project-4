@@ -56,7 +56,6 @@ def adjust_bag(request, item_id):
             bag[item_id] = quantity
         else:
             bag.pop(item_id)
-            
     messages.success(request, f'Saved the amount of {product.product} in your bag as {quantity}')
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))

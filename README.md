@@ -1,6 +1,8 @@
 # Milestone-Project-4
 My last Code Institute milestone project concerning Django Frameworks
 
+The full link is available [here](https://milestone-project-4-willdeakin.herokuapp.com/) and the full url is https://milestone-project-4-willdeakin.herokuapp.com/
+
 ## Purpose of the website
 
 ### Who is this website for?
@@ -149,7 +151,14 @@ I have used Playfair Display from google fonts to style the page headings in bro
 ### Skeleton Plane
 This website has been designed to be accessible and aesthetic at all screen sizes.
 
-
+Wireframes are linked here:
+- [Home Page](/readme_testing_media/Home.png)
+- [Store](/readme_testing_media/Store.png)
+- [Profile](/readme_testing_media/Profile.png)
+- [Login/ Register](/readme_testing_media/Login_Register.png)
+- [Bag](/readme_testing_media/Bag.png)
+- [Blog](/readme_testing_media/Blog.png)
+- [Checkout](/readme_testing_media/Checkout.png)
 
 ## Features
 

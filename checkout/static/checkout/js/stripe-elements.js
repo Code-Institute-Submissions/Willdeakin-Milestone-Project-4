@@ -55,8 +55,6 @@ form.addEventListener('submit', function(ev) {
         'save_info': saveInfo,
     };
     var url = '/checkout/cache_checkout_data/';
-    console.log(client_secret);
-    print(postData)
     $.post(url, postData).done(function () {
         stripe.confirmCardPayment(client_secret, {
             payment_method: {
@@ -87,7 +85,6 @@ form.addEventListener('submit', function(ev) {
                 }
             },
         }).then(function(result) { 
-            console.log("second log")
             if (result.error) {
                 var errorDiv = document.getElementById('card-errors');
                 var html = `
@@ -100,7 +97,7 @@ form.addEventListener('submit', function(ev) {
                 $('#loading-overlay').fadeToggle(100);
                 card.update({ 'disabled': false});
                 $('#submit-button').attr('disabled', false);
-            } else { console.log("bloody hell")
+            } else {
                 if (result.paymentIntent.status === 'succeeded') {
                     form.submit();
                 }
@@ -109,5 +106,5 @@ form.addEventListener('submit', function(ev) {
     }).fail(function () {
         // just reload the page, the error will be in django messages
         location.reload();
-    })
+    });
 });

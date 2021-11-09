@@ -122,6 +122,7 @@ body::-webkit-scrollbar-thumb{
 }
 .umber-text{
     color: var(--umber);
+    text-decoration: none;
 }
 
 /*---------------------------------------------------Home*/

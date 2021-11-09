@@ -86,7 +86,7 @@
                 {% endif %}
                 {% endfor %}
 
-                <a href="{% url 'blog' %}"><button class="regular-btn home-btn">Take a look at our blog</button></a>
+                <a href="{% url 'blog' %}" class="btn regular-btn home-btn">Take a look at our blog</a>
 
             </div>
 
@@ -112,7 +112,7 @@
                                     <p class="umber-text">{{ product.brand }} {{ product.product }}</p>
                                     <p class="umber-text">£{{ product.price }}</p>
                                     <div class="row">
-                                        <a href="{% url 'product_detail' product.id %}" class=""><button class="regular-btn">Product Details</button></a>
+                                        <a href="{% url 'product_detail' product.id %}" class="btn regular-btn">Product Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@
                     {% endfor %}
                 </div>
 
-                <a href="{% url 'store' %}"><button class="regular-btn home-btn">Take a look at our products</button></a>
+                <a href="{% url 'store' %}" class="btn regular-btn home-btn">Take a look at our products</a>
 
             </div>
             

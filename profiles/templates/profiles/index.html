@@ -20,18 +20,18 @@
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-black rounded-0 text-uppercase float-right">Update Information</button>
+                <button class="btn regular-btn float-right">Update Information</button>
             </form>
         </div>
         <div class="col-12 col-md-8">
-            <h2>Order History</h2>
+            <h2 class="umber-text">Order History</h2>
             <table class="table table-sm table-borderless">
                 <thead>
                     <tr>
-                        <th>Order Number</th>
-                        <th>Date</th>
-                        <th>Items</th>
-                        <th>Order Total</th>
+                        <th><p class="umber-text">Order Number</p></th>
+                        <th><p class="umber-text">Date</p></th>
+                        <th><p class="umber-text">Items</p></th>
+                        <th><p class="umber-text">Order Total</p></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,13 +47,13 @@
                             <td>
                                 <ul class="list-unstyled">
                                     {% for item in order.lineitems.all %}
-                                        <li class="small">
+                                        <li class="small umber-text">
                                     {{ item.product.product }} x {{ item.quantity }}
                                         </li>
                                     {% endfor %}
                                 </ul>
                             </td>
-                            <td>£{{ order.grand_total }}</td>
+                            <td class="umber-text">£{{ order.grand_total }}</td>
                         </tr>
                     {% endfor %}
                     

@@ -11,8 +11,6 @@ import json
 import time
 
 
-
-
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 
