@@ -65,12 +65,11 @@
             </div>
             <div class="col-12 col-lg-6">
                 <p class="umber-text">Please fill out the form below to complete your order</p>
-                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                <form action="{% url 'checkout' %}" method="post" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
-                        {{ order_form.first_name | as_crispy_field }}
-                        {{ order_form.last_name | as_crispy_field }}
+                        {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
                     <fieldset class="rounded px-3 mb-5">
@@ -111,7 +110,7 @@
 							</span>
 							<span>Adjust Bag</span>
 						</a>
-						<input type="submit" id="submit-button" value="Complete Order" class="btn regular-btn"></input>	
+						<input type="submit" id="submit-button" value="Complete Order" class="btn regular-btn"></input>
 						<p class="small text-danger my-0">
 							<span class="icon">
 								<i class="fas fa-exclamation-circle"></i>

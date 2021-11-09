@@ -38,12 +38,13 @@ def checkout(request):
     current_bag = bag_contents(request)
     total = current_bag['grand_total']
     print(total)
+    print("before post")
+    print(request.method)
     if request.method == 'POST':
         bag = request.session.get('bag', {})
-
+        print("before form data")
         form_data = {
-            'first_name': request.POST['first_name'],
-            'last_name': request.POST['last_name'],
+            'full_name': request.POST['full_name'],
             'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
             'country': request.POST['country'],
@@ -53,8 +54,10 @@ def checkout(request):
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
         }
+        print("form data done")
         order_form = OrderForm(form_data)
         if order_form.is_valid():
+            print("is valid")
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid

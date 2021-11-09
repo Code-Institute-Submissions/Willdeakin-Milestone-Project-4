@@ -28,13 +28,14 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+        print("message rendered")
         send_mail(
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
-        )        
+        )
+        print("email sent")
 
     def handle_event(self, event):
         """
@@ -48,7 +49,7 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.succeeded webhook from Stripe
         """
-        print("handle")
+        print("handle payment succeeded")
         intent = event.data.object
         pid = intent.id
         bag = intent.metadata.bag
@@ -84,8 +85,7 @@ class StripeWH_Handler:
             print(attempt)
             try:
                 order = Order.objects.get(
-                    first_name__iexact=shipping_details.name[0],
-                    last_name__iexact=shipping_details.name[1],
+                    full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
                     phone_number__iexact=shipping_details.phone,
                     country__iexact=shipping_details.address.country,
@@ -101,16 +101,20 @@ class StripeWH_Handler:
                 order_exists = True
                 break
             except Order.DoesNotExist:
+                print("order does not exist")
                 attempt += 1
                 time.sleep(1)
         if order_exists:
+            print(" order exists")
             self._send_confirmation_email(order)
+            print("sent confirmation email")
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
                 status=200)
         else:
             order = None
             try:
+                print("start of try")
                 order = Order.objects.create(
                     full_name=shipping_details.name,
                     user_profile=profile,
@@ -142,6 +146,8 @@ class StripeWH_Handler:
                                 quantity=quantity,
                             )
                             order_line_item.save()
+                print("end of try")
+                print(Exception)
             except Exception as e:
                 if order:
                     order.delete()

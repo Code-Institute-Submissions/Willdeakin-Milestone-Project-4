@@ -1,20 +1,6 @@
 # Milestone-Project-4
 My last Code Institute milestone project concerning Django Frameworks
 
-## Table Of Contents
-* [Purpose of the website](#purpose-of-the-website)
-* [User Experience (UX)](#user-experience-design)
-    * [User Stories](#user-stories)
-    * [Structure](#structure)
-    * [Design and Wireframes](#design-and-wireframes)
-* [Features](#features)
-* [Technologies](#technologies)
-* [Deployment](#deployment)
-    * [Project Creation](#project-creation)
-    * [Heroku](#using-heroku)
-* [Credits](#credits)
-
-
 ## Purpose of the website
 
 ### Who is this website for?
@@ -33,7 +19,7 @@ The purchasing experience follows a standard format of adding to bag, going to c
 The goal of the website is to create a fully functional e-commerce application using Django Frameworks. 
 Users can register, log in and add delivery information to their
 profiles to expedite the checkout process.
-The blog app adds functionality to the application, as in the blog app customers can interact with the store's community, giving tips for fitness and exercise. 
+The blog app adds functionality to the application, as in the blog app customers can interact further with the store, receiving tips for fitness and exercise. 
 The comment section in the blog app allows for the community to interact further, commenting on how these blogs have helped them in their fitness journeys.
 
 ### Scope Plane

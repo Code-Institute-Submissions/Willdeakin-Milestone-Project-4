@@ -55,13 +55,14 @@ form.addEventListener('submit', function(ev) {
         'save_info': saveInfo,
     };
     var url = '/checkout/cache_checkout_data/';
-
+    console.log(client_secret);
+    print(postData)
     $.post(url, postData).done(function () {
         stripe.confirmCardPayment(client_secret, {
             payment_method: {
                 card: card,
                 billing_details: {
-                    name: $.trim(form.first_name.value + form.last_name.value),
+                    name: $.trim(form.full_name.value),
                     phone: $.trim(form.phone_number.value),
                     email: $.trim(form.email.value),
                     address:{
@@ -74,7 +75,7 @@ form.addEventListener('submit', function(ev) {
                 }
             },
             shipping: {
-                name: $.trim(form.first_name.value + form.last_name.value),
+                name: $.trim(form.full_name.value),
                 phone: $.trim(form.phone_number.value),
                 address: {
                     line1: $.trim(form.street_address1.value),
@@ -85,7 +86,8 @@ form.addEventListener('submit', function(ev) {
                     state: $.trim(form.county.value),
                 }
             },
-        }).then(function(result) {
+        }).then(function(result) { 
+            console.log("second log")
             if (result.error) {
                 var errorDiv = document.getElementById('card-errors');
                 var html = `
@@ -98,7 +100,7 @@ form.addEventListener('submit', function(ev) {
                 $('#loading-overlay').fadeToggle(100);
                 card.update({ 'disabled': false});
                 $('#submit-button').attr('disabled', false);
-            } else {
+            } else { console.log("bloody hell")
                 if (result.paymentIntent.status === 'succeeded') {
                     form.submit();
                 }

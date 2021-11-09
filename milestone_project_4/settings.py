@@ -26,8 +26,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = True
+
+DEBUG = 'DEVELOPMENT' in os.environ
+
 
 ALLOWED_HOSTS = ['milestone-project-4-willdeakin.herokuapp.com', 'localhost']
 
@@ -201,9 +202,13 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
+EMAIL_HOST_PASS ='rxchqvcdycgqlpdm'
+EMAIL_HOST_USER = 'willdeakin1@gmail.com'
+
+
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'fitnesscentre@example.com'
+    DEFAULT_FROM_EMAIL = 'willdeakin1@gmail.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True
