@@ -208,6 +208,7 @@ body::-webkit-scrollbar-thumb{
     width:60%;
     display: block;
     margin: auto;
+    position: absolute;
     bottom: 1rem;
     background-color: var(--torquise-green);
     height: auto;

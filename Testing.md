@@ -173,3 +173,71 @@ I ended up manually deleting these from the db.json file.
 - I have had multiple issues with loading/ importing the relevant database, library etc.
 For example, I have had an issue with crispy forms where I loaded a superfluous library which was stopping my crispy forms from working.
 I had to remove this library and roll back django-crispy-forms from 1.13.0 to 1.11.0.
+
+
+### Quality by Lighthouse
+
+Websites performance has been checked with Lighthouse within Chrome developer tools and results are as follows:
+
+1. Home Page
+
+Mobile
+
+![Home test mobile](/readme_testing_media/home_mobile.png)
+
+Desktop
+
+![Home test desktop](/readme_testing_media/home_desktop.png)
+
+2. Products Page
+
+Mobile
+
+![Store test mobile](/readme_testing_media/store_mobile.png)
+
+Desktop
+
+![Store test desktop](/readme_testing_media/store_desktop.png)
+
+3. Profile Page
+
+Mobile
+
+![Profile test mobile](/readme_testing_media/profile_mobile.png)
+
+Desktop
+
+![Profile test desktop](/readme_testing_media/profile_desktop.png)
+
+
+4. Checkout Page
+
+Mobile
+
+![Checkout test mobile](/readme_testing_media/checkout_mobile.png)
+
+
+Desktop
+
+![Checkout test desktop](/readme_testing_media/checkout_desktop.png)
+
+
+5. Shopping Bag Page
+
+Mobile
+
+![Bag test mobile](/readme_testing_media/bag_mobile.png)
+
+Desktop
+
+![Bag test desktop](/readme_testing_media/bag_desktop.png)
+
+6. Blog Page
+
+Mobile
+
+![Blog test mobile](/readme_testing_media/blog_mobile.png)
+
+Desktop
+
+![Blog test desktop](/readme_testing_media/blog_desktop.png)
