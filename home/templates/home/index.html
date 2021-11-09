@@ -66,14 +66,14 @@
                 </div>
             </div>
 
-            <div class=" col-12 col-lg-6 col-xl-4">
+            <div class=" col-12 col-lg-6 col-xl-4 home-container">
                 <h1 class="home-title">What we're about</h1>
                 <p class="umber-text">We believe that everyone should be able to get fit in the comfort of their own home. 
                     To that end we provide a number of great products that can be used for achieving your fitness goals; whether it be stamina, strength or just improving your physique we have something to help you.</p>
                 <p class="umber-text">We also host a blog which is focused around helping to coach and improve your form on exercises that don't require any equipment at all! </p>
 
                 {% for post in posts %}
-                {% if post.id == 2 or post.id == 3 %}
+                {% if post.id == 2 %}
                     <div class="card mb-4">
                         <div class="card-body">
                             <h2 class="blog-title">{{ post.title }}</h2>

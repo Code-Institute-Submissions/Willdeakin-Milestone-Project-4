@@ -99,7 +99,36 @@ Some app pages are only accessible to authorised users and/or superusers for sec
 **Blog Comments** Can be posted by anyone but will only be displayed if a superuser approves them.
 
 ## Browser testing
+Website performs as intended on desktop PC at 2560x1440 windowed:
 
+1. Chrome
+- All elements of the website work as intended.
+
+2. Microsoft Edge
+- All elements of the website work as intended.
+
+3. Firefox
+- All elements of the website work as intended, except for the scrollbar which is the firefox default.
+
+Website performs as intended on desktop PC at 1280x720 windowed:
+1. Chrome
+- All elements of the website work as intended.
+
+2. Microsoft Edge
+- All elements of the website work as intended.
+
+3. Firefox
+- All elements of the website work as intended.
+
+Website performs as intended on desktop PC at 375x812 (iPhone X dimensions) windowed:
+1. Chrome
+- All elements of the website work as intended.
+
+2. Microsoft Edge
+- All elements of the website work as intended.
+
+3. Firefox
+- All elements of the website work as intended.
 
 ## Functionality of the website
 1. Responsiveness

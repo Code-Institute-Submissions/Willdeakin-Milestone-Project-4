@@ -5,22 +5,22 @@
         {% if request.user.is_authenticated %}
               <div class="bg-custom p-4">
                   <div class="row">
-                    <span class="col-3 col-xl-2"><a href="{% url 'home' %}" class="nav-link">Home</a></span>
-                    <span class="col-3 col-xl-2"><a href="{% url 'store' %}" class="nav-link">Browse Our Selection Of Fitness Equipment</a></span>
-                    <span class="col-3 col-xl-2"><a href="{% url 'profile' %}" class="nav-link">Profile</a></span>
-                    <span class="col-3 col-xl-2"><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></span>
-                    <span class="col-3 col-xl-2"><a href="{% url 'blog' %}" class="nav-link">Blog</a></span>
+                    <span class="col-6 col-xl-2"><a href="{% url 'home' %}" class="nav-link">Home</a></span>
+                    <span class="col-6 col-xl-2"><a href="{% url 'store' %}" class="nav-link">Browse Our Selection Of Fitness Equipment</a></span>
+                    <span class="col-4 col-xl-2"><a href="{% url 'profile' %}" class="nav-link">Profile</a></span>
+                    <span class="col-4 col-xl-2"><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></span>
+                    <span class="col-4 col-xl-2"><a href="{% url 'blog' %}" class="nav-link">Blog</a></span>
                 </div>
               </div>
         {% else %}
 
               <div class="bg-custom p-4">
                 <div class="row">
-                  <span class="col-3 col-xl-2"><a href="{% url 'home' %}" class="nav-link">Home</a></span>
-                  <span class="col-3 col-xl-2"><a href="{% url 'store' %}" class="nav-link">Browse Our Selection Of Fitness Equipment</a></span>
-                  <span class="col-3 col-xl-2"><a href="{% url 'account_login' %}" class="nav-link">Login</a></span>
-                  <span class="col-3 col-xl-2"><a href="{% url 'account_signup' %}" class="nav-link">Register</a></span>
-                  <span class="col-3 col-xl-2"><a href="{% url 'blog' %}" class="nav-link">Blog</a></span>
+                  <span class="col-6 col-xl-2"><a href="{% url 'home' %}" class="nav-link">Home</a></span>
+                  <span class="col-6 col-xl-2"><a href="{% url 'store' %}" class="nav-link">Browse Our Selection Of Fitness Equipment</a></span>
+                  <span class="col-4 col-xl-2"><a href="{% url 'profile' %}" class="nav-link">Profile</a></span>
+                  <span class="col-4 col-xl-2"><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></span>
+                  <span class="col-4 col-xl-2"><a href="{% url 'blog' %}" class="nav-link">Blog</a></span>
                 </div>
               </div>
         {% endif %}

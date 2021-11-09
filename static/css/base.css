@@ -164,6 +164,9 @@ body::-webkit-scrollbar-thumb{
     border: none;
     width: 60%;
 }
+.home-container{
+    margin-bottom: 6.5rem;
+}
 
 /*---------------------------------------------------Store*/
 .sort-container{
