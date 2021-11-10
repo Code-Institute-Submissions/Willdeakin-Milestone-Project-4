@@ -58,8 +58,8 @@ class StripeWH_Handler:
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
-        
-         # Update profile information if save_info was checked
+
+        # Update profile information if save_info was checked
         profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
@@ -146,7 +146,6 @@ class StripeWH_Handler:
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
-
 
     def handle_payment_intent_payment_failed(self, event):
         """

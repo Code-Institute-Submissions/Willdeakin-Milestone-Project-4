@@ -1,5 +1,3 @@
-from decimal import Decimal
-from django.conf import settings
 from django.shortcuts import get_object_or_404
 from store.models import Products
 
@@ -31,10 +29,8 @@ def bag_contents(request):
                     'quantity': quantity,
                     'product': product,
                 })
-    
-
     grand_total = total
-    
+
     context = {
         'bag_items': bag_items,
         'total': total,

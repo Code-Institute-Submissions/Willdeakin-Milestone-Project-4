@@ -82,6 +82,8 @@ There are also 2 undefined variables $ and Stripe; $ is used in jquery and thus 
 #### Python
 
 Python files have been run through [Extends Class Python Tester](https://extendsclass.com/python-tester.html) and a few files returned syntax errors; all of which were regarding f strings, which can be ignored.
+Python files have also been tested using python3 -m flake8 in the terminal, some errors remain in long lines where there is no natural break, in models files where advising not to use null = True and in local variable 'e' is assigned but never used.
+These can be ignored as they do not affect the website function.
 
 #### Form Validation
 

@@ -1,14 +1,17 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (render, redirect, reverse,
+                              HttpResponse, get_object_or_404)
 from django.contrib import messages
 
 from store.models import Products
 
 # Create your views here.
 
+
 def view_bag(request):
     """ A view that renders the bag contents page """
 
     return render(request, 'bag/index.html')
+
 
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
@@ -25,12 +28,11 @@ def add_to_bag(request, item_id):
     else:
         bag[item_id] = quantity
         messages.success(request, f'Added {product.product} to your bag')
-    
+
     request.session['bag'] = bag
 
-
     return redirect(redirect_url)
-    
+
 
 def adjust_bag(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
@@ -45,18 +47,21 @@ def adjust_bag(request, item_id):
     if size:
         if quantity > 0:
             bag[item_id] = quantity
-            messages.success(request, f'Changed size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}')
+            messages.success(request,
+                             f'Changed size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}')
         else:
             del bag[item_id]['items_by_size'][size]
             if not bag[item_id]['items_by_size']:
                 bag.pop(item_id)
-            messages.success(request, f'Removed size {size.upper()} {product.name} from your bag')
+            messages.success(request,
+                             f'Removed size {size.upper()} {product.name} from your bag')
     else:
         if quantity > 0:
             bag[item_id] = quantity
         else:
             bag.pop(item_id)
-    messages.success(request, f'Saved the amount of {product.product} in your bag as {quantity}')
+    messages.success(request,
+                     f'Saved the amount of {product.product} in your bag as {quantity}')
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 

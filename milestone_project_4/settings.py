@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    
+
     'store',
     'home',
     'profiles',
@@ -191,18 +191,16 @@ if 'USE_AWS' in os.environ:
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
-
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
-#stripe
+# stripe
 STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
-EMAIL_HOST_PASS ='rxchqvcdycgqlpdm'
+EMAIL_HOST_PASS = 'rxchqvcdycgqlpdm'
 EMAIL_HOST_USER = 'willdeakin1@gmail.com'
 
 
