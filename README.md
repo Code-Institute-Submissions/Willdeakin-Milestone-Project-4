@@ -40,8 +40,9 @@ Here is the list of required features and functions. CRUD (Create, Read, Update,
 #### Header and navigation
 The Navbar is consistent through the whole website and consists of:
 
-- A nav button which opens access to all nav elements, on the left of the navbar.
+- A nav button which opens access to all nav elements, which is on the left of the navbar.
 - The bag icon and total on the right of the navbar, which is a link to the bag app.
+- The navbar itself opens on the left of the page and is the full height of the screen.
 - The home button which is a link to the home app/ landing page.
 - A store button, which is a link to the store app with no sorting.
 - A register and a login button, both of which are links to the register and login pages respectively and allow the user to log in to the website.
@@ -160,6 +161,8 @@ Wireframes are linked here:
 - [Blog](/readme_testing_media/Blog.png)
 - [Checkout](/readme_testing_media/Checkout.png)
 
+The application is similar to the wireframes in all pages. 
+The most major difference between the application and wireframes is that the navbar in the application isn't the same, with it displaying on the left of the screen rather than the top in the navbar.
 ## Features
 
 ### Existing features
@@ -233,6 +236,7 @@ I used [GitHub](https://github.com/) as a remote repository and development envi
 This project requires back-end technologies, so for the deployment I used [Heroku](https://www.heroku.com/), a cloud platform where users can host their projects.
 For the purpose of this project the free version was suitable. A PostgreSQL database was selected from free Heroku addons. 
 For hosting of static files and media files I used an AWS S3 bucket on a free plan.
+During most of development, all media and static files were stored in the github repository and the database used was the sqlite3 database which is installed with django.
 
 Heroku setup:
 - I created a new app by clicking on *New* and then *Create new app*
@@ -268,6 +272,8 @@ to better fit this project.
 
 
 ## Credits
+
+Code for the navbar, as stated in style.css, is adapted from a youtube [tutorial](https://youtu.be/HbBMp6yUXO0), opting to use the mobile/ left nav.
 
 Thanks to my mentor Spencer for his help and advice throughout
 

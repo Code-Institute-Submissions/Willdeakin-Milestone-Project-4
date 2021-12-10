@@ -61,10 +61,8 @@ body::-webkit-scrollbar-thumb{
     display: flex;
     gap: var(--gap, 0.5rem);
 }
+/*Adapted from tutorial https://youtu.be/HbBMp6yUXO0*/
 
-.primary-navigation{
-    
-}
 .primary-navigation{
     --gap: 12%;
     list-style: none;
@@ -77,7 +75,14 @@ body::-webkit-scrollbar-thumb{
     inset: 0 30% 0 0;
     z-index: 12;
     background:hsl(0 0% 100% / 0.4);
+    transform: translateX(-5rem);
+    transition: 0.5s;
 }
+
+.primary-navigation{
+    transform: translateX(0rem);
+}
+
 @supports (backdrop-filter: blur(1rem)){
     .primary-navigation{
         background:hsl(0 0% 100% / 0.1);
