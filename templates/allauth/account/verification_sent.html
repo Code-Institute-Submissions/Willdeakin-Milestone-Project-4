@@ -1,11 +1,21 @@
-{% extends "account/base.html" %}
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+      <div class="col main-title">
+          <h1 class="">Verify your E-mail Address</h1>
+      </div>
+  </div>
+</div>
+{% endblock %}
+
 
 {% block content %}
-    <h1>{% trans "Verify Your E-mail Address" %}</h1>
 
     <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
 
