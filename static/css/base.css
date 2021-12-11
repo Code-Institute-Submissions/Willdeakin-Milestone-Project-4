@@ -73,7 +73,7 @@ body::-webkit-scrollbar-thumb{
     position: fixed;
     padding: min(10rem, 30vh) 2rem;
     inset: 0 30% 0 0;
-    z-index: 12;
+    z-index: 1000;
     background:hsl(0 0% 100% / 0.4);
     transform: translateX(-5rem);
     transition: 0.5s;
