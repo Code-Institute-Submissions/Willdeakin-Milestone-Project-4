@@ -73,7 +73,7 @@ body::-webkit-scrollbar-thumb{
     position: fixed;
     padding: min(10rem, 30vh) 2rem;
     inset: 0 30% 0 0;
-    z-index: 1000;
+    z-index: 9998;
     background:hsl(0 0% 100% / 0.4);
     transform: translateX(-5rem);
     transition: 0.5s;
@@ -177,6 +177,15 @@ body::-webkit-scrollbar-thumb{
     background-color: white;
     color: var(--umber);
 
+}
+.carousel-button{
+    z-index: 10;
+}
+.carousel-caption{
+    z-index: 10;
+}
+div#homecarousel{
+    z-index: -200;
 }
 .home-title{
     text-align: center;
